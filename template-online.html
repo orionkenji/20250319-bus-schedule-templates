@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{pdfFilename}}</title>
+    <title>{{pdf_name}}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -31,7 +31,7 @@
             --light-grey: #f0f0f0;
             --dark-grey: #d9d9d9;
             --mono-font: "Inconsolata", monospace;
-            --bus-color: hsl(192, 88%, 67%);
+            --bus-color: {{bus_color_html}};
 
             --bus-shift-color: {
                     {
@@ -337,7 +337,7 @@
                 </div>
             </div>
             <div class="top-row02">
-                <div class="{{AMPM}}">{{AMPM}}</div>
+                <div class="{{AM_PM}}">{{AM_PM}}</div>
                 <div>{{day_and_date}}</div>
                 <div>{{bus_color}}<br>{{term}}<br>{{week_name}}</div>
             </div>
@@ -366,14 +366,14 @@
                     <div class="column-headings">Contact 2 (Time and Person)</div>
                     <div class="column-headings">Monitor</div>
                 </div>
-                {{trip-html}}
+                {{bus_trip_html}}
 
 
 
 
             </div>
             <div class="qr-code-outer-section">
-                <div class="barcode"><img src="barcode.png" alt="Barcode"></div>
+                <div class="barcode"><img src="{{barcode_url}}" alt="Barcode"></div>
                 <div class="mid-row03">
                     <div class="instruction-number">3</div>
                     <div class="signatures">
