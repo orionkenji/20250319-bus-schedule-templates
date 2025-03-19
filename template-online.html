@@ -80,12 +80,13 @@
             font-size: 1rem
         }
 
-        .AM {
-            color: #7cb362;
+        .AM,
+        .flex-pick-up {
+            color: #84cc16;
         }
 
         .PM {
-            color: #9f625f
+            color: ##ef4444
         }
 
         .top-row01 img {
@@ -280,13 +281,19 @@
         }
 
 
-
         .flex-pick-up {
-            display: inline-flex;
-            height: .85em;
-            align-items: center;
-            margin-inline-start: 3px;
+            width: 3mm;
+            height: 3mm;
+            position:absolute;
+            display: flex;
+            right: 0;
+            
+
+           
         }
+        .name-box:has(.flex-pick-up) > div:first-child {
+    padding-inline-end: 6px;
+}
 
 
 
@@ -309,6 +316,14 @@
 
         .depart {
             grid-column: span 5;
+        }
+
+        .name-box{
+            display: grid;
+            grid-template-columns: 1fr auto;
+            
+            align-items: center;
+            position:relative;
         }
     </style>
 </head>
