@@ -67,13 +67,42 @@
         }
 
         .top-row01,
-        .top-row02,
         .end-row01 {
             display: flex;
             gap: 3mm;
             justify-content: space-between;
             align-items: center;
         }
+
+
+        .top-row02 {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            /* Ensures Div 2 is centered */
+            align-items: center;
+            /* Align items vertically */
+            gap: 3mm;
+            padding-block-end: 3px;
+            font-family: var(--mono-font);
+            font-size: 2.5rem;
+        }
+
+
+
+        .top-row02>div:nth-child(2) {
+            text-align: center;
+            /* Center the text inside */
+        }
+
+        .top-row02>div:nth-child(3) {
+
+            font-size: .85rem;
+            text-align: right;
+            font-variation-settings: "wdth" 80;
+        }
+
+     
+
 
         .top-row01 {
             padding-block: 3px;
@@ -94,22 +123,7 @@
             padding: 0;
         }
 
-        .top-row02 {
-            padding-block-end: 3px;
-            font-family: var(--mono-font);
-            font-size: 2.5rem;
-        }
 
-        .top-row02>div:nth-child(3) {
-
-            font-size: .85rem;
-            text-align: right;
-            font-variation-settings: "wdth" 80;
-        }
-        .top-row02 > div:nth-child(2) {
-    flex-grow: 1;  /* Takes up all available space */
-    text-align: center; /* Centers text inside */
-}
 
 
         .mid-row01,
@@ -272,7 +286,6 @@
             font-family: var(--mono-font);
             font-variation-settings: "wdth" 80;
             ##trip_font_size##
-
         }
 
 
@@ -289,16 +302,17 @@
         .flex-pick-up {
             width: 3mm;
             height: 3mm;
-            position:absolute;
+            position: absolute;
             display: flex;
             right: 0;
-            
 
-           
+
+
         }
-        .name-box:has(.flex-pick-up) > div:first-child {
-    padding-inline-end: 6px;
-}
+
+        .name-box:has(.flex-pick-up)>div:first-child {
+            padding-inline-end: 6px;
+        }
 
 
 
@@ -323,12 +337,12 @@
             grid-column: span 5;
         }
 
-        .name-box{
+        .name-box {
             display: grid;
             grid-template-columns: 1fr auto;
-            
+
             align-items: center;
-            position:relative;
+            position: relative;
         }
     </style>
 </head>
