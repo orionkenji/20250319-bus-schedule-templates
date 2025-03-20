@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title> March 1, 2025 AE</title>
+    <!-- Google Fonts: Noto Sans JP -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Base font size and dimensions for A4 with specified margins */
+        html,
+        body {
+            font-size: 12px;
+            margin: 0;
+            padding: 0;
+            width: 210mm;
+            height: 297mm;
+
+            display: grid;
+            grid-template-rows: 1fr;
+            justify-items: stretch;
+
+
+
+        }
+
+        .park-blocks {
+            grid-column: span 9;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 40px 40px;
+        }
+
+        .park-blocks>div {
+            border-bottom: 1px solid black;
+
+
+        }
+
+        /* Global font class for Noto Sans JP */
+        .noto-sans-jp-default {
+            font-family: "Noto Sans JP", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        /* Set A4 page size with margins */
+        @page {
+            size: A4;
+            margin: 0;
+
+        }
+
+        :root {
+            --light-grey: #f7f7f7;
+            --dark-grey: #747474;
+            --dark-class: rgb(170, 38, 60);
+            --light-class: rgb(246, 207, 213);
+        }
+
+        /* Grid layout for the body */
+        .wrapper {
+            display: grid;
+            grid-template-rows: auto auto 1fr auto;
+            margin: 5mm;
+
+            border: 3mm solid var(--light-class);
+            position: relative;
+
+
+
+
+
+
+        }
+
+        /* End section styling */
+        .end {
+
+            text-align: center;
+            font-weight: 600;
+            background-color: var(--light-class);
+            padding: 2px;
+            color: var(--dark-class);
+        }
+
+        /* Topper section styling */
+        .topper {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 6px 6px 0px 6px;
+            background-color: white;
+
+
+        }
+
+        .topper>div:nth-child(2) {
+            white-space: nowrap;
+            color: var(--dark-grey);
+
+        }
+
+        .topper img {
+            height: 6mm;
+            padding-top: 1mm;
+        }
+
+        /* Warning box styling */
+        .warning-box {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 8px;
+            line-height: 1.1;
+            padding: 4px;
+            border: 1px solid black;
+        }
+
+        /* Shared styling for warning-box and schedule */
+        .warning-box,
+        .schedule {
+            background-color: white;
+
+            padding-inline: 2mm;
+        }
+
+        /* Dates section styling */
+        .dates {
+            display: flex;
+            align-items: stretch;
+            font-family: monospace;
+            padding: 6px;
+            background-color: white;
+
+        }
+
+        .dates>div:nth-child(1),
+        .dates>div:nth-child(2) {
+            display: flex;
+            flex-wrap: wrap;
+            place-content: center;
+            height: 100%;
+            font-size: 3rem;
+        }
+
+        .dates>div:nth-child(2) {
+            flex-grow: 1;
+            place-content: center;
+        }
+
+        .dates>div:nth-child(3) {
+            line-height: 1.25;
+            text-align: right;
+        }
+
+        .dates-info>div:first-child {
+            font-size: 1.25rem;
+        }
+
+        /* Schedule section styling */
+        .schedule {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        /* Instructions section styling */
+        .instructions {
+            display: grid;
+            font-size: 0.8rem;
+            grid-template-columns: 1fr 1fr 1fr;
+            border-block: 1px solid;
+            padding: 3px;
+            align-items: end;
+
+        }
+
+
+
+
+
+
+
+        .from-data {
+            flex-grow: 1;
+
+            display: grid;
+            grid-template-columns: 20px 1fr 28px 1fr 1fr 0.25fr 0.25fr 0.25fr 0.25fr;
+            grid-auto-rows: 28px;
+            position: absolute;
+            width: 100%;
+            z-index: 0;
+
+        }
+
+        .extras {
+            display: grid;
+            grid-template-columns: subgrid;
+            grid-column: span 9;
+        }
+
+        .from-data>div:nth-child(even) {
+            background-color: var(--light-grey);
+        }
+
+        .from-data-actual {
+            flex-grow: 1;
+
+            display: grid;
+            grid-template-columns: 20px 1fr 28px 1fr 1fr 0.25fr 0.25fr 0.25fr 0.25fr;
+            grid-auto-rows: 28px;
+
+        }
+
+        .age0 {
+            background-color: hsl(0, 70%, 90%);
+            /* very light red */
+            color: hsl(0, 70%, 30%);
+            /* even darker red */
+        }
+
+        .age1,
+        .age6 {
+            background-color: hsl(33, 70%, 90%);
+            /* very light orange */
+            color: hsl(33, 70%, 30%);
+            /* even darker orange */
+        }
+
+        .age2,
+        .age7 {
+            background-color: hsl(66, 70%, 90%);
+            /* very light yellow-green */
+            color: hsl(66, 70%, 30%);
+            /* even darker yellow-green */
+        }
+
+
+        .age3,
+        .age8 {
+            background-color: hsl(132, 70%, 90%);
+            /* very light teal */
+            color: hsl(132, 70%, 30%);
+            /* even darker teal */
+        }
+
+
+        .age4,
+        .age9 {
+            background-color: hsl(198, 70%, 90%);
+            /* very light blue-green */
+            color: hsl(198, 70%, 30%);
+            /* even darker blue-green */
+        }
+
+
+
+        .age5 {
+            background-color: hsl(264, 70%, 90%);
+            /* very light indigo */
+            color: hsl(264, 70%, 30%);
+            /* even darker indigo */
+        }
+
+        .age10 {
+            background-color: hsl(297, 70%, 90%);
+            /* very light purple */
+            color: hsl(297, 70%, 30%);
+            /* even darker purple */
+        }
+
+        /* Code section styling */
+        .code {
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+        }
+
+        .code div:first-child {
+            padding: 6px;
+        }
+
+        .barcode {
+            aspect-ratio: 1 / 1;
+        }
+
+        .barcode img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+
+        }
+
+        .student-counts {
+            grid-column: span 9;
+
+
+        }
+
+        .left,
+        .right {
+            display: grid;
+            grid-template-rows: 40px 40px 40px;
+    
+        }
+
+        .left {
+            grid-column: span 4;
+            grid-template-columns: min-content 1fr 1fr;
+            
+        }
+
+        .right {
+            grid-column: span 5;
+            grid-template-columns:1fr 1fr 1fr 1fr;
+        }
+.left>div, .right>div{
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    padding: 3px;
+}
+
+
+
+
+       
+
+        .counts-label {
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            font-size: 9px !important;
+            line-height: 1;
+            font-weight: 400;
+            text-align: right !important;
+            padding: 6px !important;
+            background-color: var(--light-class);
+            color: var(--dark-class);
+
+        }
+
+
+
+        /* Teacher name styling */
+        .teachername {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .background-row {
+            display: grid;
+            grid-template-columns: subgrid;
+            grid-column: span 9;
+            border-bottom: 1px solid;
+        }
+
+        .real-row {
+            display: grid;
+            grid-template-columns: subgrid;
+            grid-column: span 9;
+
+        }
+
+        .data-section-home {
+            display: grid;
+            grid-template-columns: subgrid;
+            grid-column: span 9;
+            position: relative;
+            flex-grow: 1;
+        }
+
+        .background-row>div:nth-child(n+3):nth-child(-n+8) {
+            border-right: 1px solid;
+        }
+
+
+
+        .row-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: .85rem;
+        }
+
+        .student-row-name {
+            font-size: 1.1rem;
+            display: flex;
+            width: 100%;
+            height: 100%;
+            white-space: pre;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+
+
+        }
+
+        .phone {
+            font-size: 1.3rem;
+            display: flex;
+
+            /* 'flex-end' is the standard value */
+            font-weight: 900;
+            align-self: stretch;
+
+            justify-content: center;
+            align-content: center;
+            flex-wrap: wrap;
+            width: 27px;
+            position: relative;
+            z-index: 1;
+            border-right: 1px black solid;
+            border-bottom: 1px black solid;
+        }
+
+        .real-row-legend {
+            font-size: .85rem;
+            text-align: center;
+            line-height: 1;
+        }
+
+        .real-row-legend>div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+
+        .park-time {
+            font-size: 9px;
+        }
+
+        .class-name {
+            font-size: 2rem;
+            color: var(--dark-class);
+        }
+
+        .countings {
+            display: grid;
+            grid-template-columns: subgrid;
+            grid-column: span 9;
+
+            
+        }
+
+       
+
+     
+
+        .from-data>div:last-child {
+            height: auto;
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body class="noto-sans-jp-default">
+    <div class="wrapper">
+
+        <div class="topper">
+            <div>
+                <img src="https://cdn.prod.website-files.com/5c02771190375e263a515ec5/65ac1052f76385678400c82c_joy-logo-short-blue.png"
+                    alt="Joy Logo">
+            </div>
+            <div>Class Attendance</div>
+            <div class="warning-box">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="5mm" width="4.375mm">
+                        <path
+                            d="M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zm160 96c13.3 0 24 10.7 24 24l0 112c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-112c0-13.3 10.7-24 24-24zM192 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"
+                            fill="#e93337" />
+                    </svg>
+                </div>
+                <div>
+                    個人情報の取扱いについて: この書類はJoy to the Worldに帰属します。万一発見された場合は、03-5684-0247までご連絡ください。 This form is the
+                    property of
+                    Joy to the World. If found, please contact us at 03-5684-0247.
+                </div>
+            </div>
+        </div>
+        <div class="dates">
+            <div class="class-name">K1</div>
+
+            <div>Sat, Mar 1, 2025</div>
+            <div class="dates-info">
+                <div>Day 1 of 5</div>
+                <div>2024-2025 2T</div>
+                <div>Week 26</div>
+            </div>
+        </div>
+        <div class="schedule">
+            <div class="instructions">
+
+
+                <div>Head Teacher: <span class="teachername">Janina Liwag</span>
+                </div>
+                <div>Assistants: <span class="teachername">Aina Hori, Austin </span>
+                </div>
+                <div>Helpers:</div>
+
+            </div>
+
+            <div class="data-section-home">
+
+
+                <div class="from-data-actual">
+                    <div class="real-row real-row-legend">
+                        <div></div>
+                        <div class="">Student Name and Age</div>
+
+                        <div>
+
+                        </div>
+                        <div class="arrival">Arrival</div>
+                        <div class="departure">Departure</div>
+                        <div class="park-time">Leave<br>Joy</div>
+                        <div class="park-time">Arrive<br>Park</div>
+                        <div class="park-time">Leave<br>Park</div>
+                        <div class="park-time">Arrive<br>Joy</div>
+                    </div>
+                    <div class="real-row">
+                        <div></div>
+                        <div class="student-row-name">An Kambayashi</div>
+                        <div class="phone age2">
+                            <div>2</div>
+                        </div>
+                        <div class="arrival"></div>
+                        <div class="departure"></div>
+                        <div class="park-time"></div>
+                        <div class="park-time"></div>
+                        <div class="park-time"></div>
+                        <div class="park-time"></div>
+                    </div>
+                    <div class="real-row">
+                        <div></div>
+                        <div class="student-row-name">An Kambayashi</div>
+                        <div class="phone age2">
+                            <div>2</div>
+                        </div>
+                        <div class="arrival"></div>
+                        <div class="departure"></div>
+                        <div class="park-time"></div>
+                        <div class="park-time"></div>
+                        <div class="park-time"></div>
+                        <div class="park-time"></div>
+                    </div>
+                    <div class="real-row">
+                        <div></div>
+                        <div class="student-row-name">Cocoro Motegi</div>
+                        <div class="phone age2">
+                            <div>2</div>
+                        </div>
+                        <div class="arrival"></div>
+                        <div class="departure"></div>
+                        <div class="park-time"></div>
+                        <div class="park-time"></div>
+                        <div class="park-time"></div>
+                        <div class="park-time"></div>
+                    </div>
+                    <div class="real-row">
+                        <div></div>
+                        <div class="student-row-name">Ryuto Kamiya</div>
+                        <div class="phone age2">
+                            <div>2</div>
+                        </div>
+                        <div class="arrival"></div>
+                        <div class="departure"></div>
+                        <div class="park-time"></div>
+                        <div class="park-time"></div>
+                        <div class="park-time"></div>
+                        <div class="park-time"></div>
+                    </div>
+                    <div class="real-row">
+                        <div></div>
+                        <div class="student-row-name">Sora Kobayashi</div>
+                        <div class="phone age1">
+                            <div>1</div>
+                        </div>
+                        <div class="arrival"></div>
+                        <div class="departure"></div>
+                        <div class="park-time"></div>
+                        <div class="park-time"></div>
+                        <div class="park-time"></div>
+                        <div class="park-time"></div>
+                    </div>
+                    <div class="real-row">
+                        <div></div>
+                        <div class="student-row-name">Takuto Cho</div>
+                        <div class="phone age1">
+                            <div>1</div>
+                        </div>
+                        <div class="arrival"></div>
+                        <div class="departure"></div>
+                        <div class="park-time"></div>
+                        <div class="park-time"></div>
+                        <div class="park-time"></div>
+                        <div class="park-time"></div>
+                    </div>
+                    <div class="real-row">
+                        <div></div>
+                        <div class="student-row-name">Saki Iemura</div>
+                        <div class="phone age2">
+                            <div>2</div>
+                        </div>
+                        <div class="arrival"></div>
+                        <div class="departure"></div>
+                        <div class="park-time"></div>
+                        <div class="park-time"></div>
+                        <div class="park-time"></div>
+                        <div class="park-time"></div>
+                    </div>
+                    <div class="real-row">
+                        <div></div>
+                        <div class="student-row-name">Taiga Takagi</div>
+                        <div class="phone age2">
+                            <div>2</div>
+                        </div>
+                        <div class="arrival"></div>
+                        <div class="departure"></div>
+                        <div class="park-time"></div>
+                        <div class="park-time"></div>
+                        <div class="park-time"></div>
+                        <div class="park-time"></div>
+                    </div>
+                    <div class="real-row">
+                        <div></div>
+                        <div class="student-row-name">Sho Sazuka</div>
+                        <div class="phone age2">
+                            <div>2</div>
+                        </div>
+                        <div class="arrival"></div>
+                        <div class="departure"></div>
+                        <div class="park-time"></div>
+                        <div class="park-time"></div>
+                        <div class="park-time"></div>
+                        <div class="park-time"></div>
+                    </div>
+                    <div class="real-row">
+                        <div></div>
+                        <div class="student-row-name">Kento Sato</div>
+                        <div class="phone age2">
+                            <div>2</div>
+                        </div>
+                        <div class="arrival"></div>
+                        <div class="departure"></div>
+                        <div class="park-time"></div>
+                        <div class="park-time"></div>
+                        <div class="park-time"></div>
+                        <div class="park-time"></div>
+                    </div>
+                    <div class="real-row">
+                        <div></div>
+                        <div class="student-row-name">An Kambayashi</div>
+                        <div class="phone age2">
+                            <div>2</div>
+                        </div>
+                        <div class="arrival"></div>
+                        <div class="departure"></div>
+                        <div class="park-time"></div>
+                        <div class="park-time"></div>
+                        <div class="park-time"></div>
+                        <div class="park-time"></div>
+                    </div>
+                    <div class="real-row">
+                        <div></div>
+                        <div class="student-row-name">Mitora Teragaki</div>
+                        <div class="phone age2">
+                            <div>2</div>
+                        </div>
+                        <div class="arrival"></div>
+                        <div class="departure"></div>
+                        <div class="park-time"></div>
+                        <div class="park-time"></div>
+                        <div class="park-time"></div>
+                        <div class="park-time"></div>
+                    </div>
+                    <div class="real-row">
+                        <div></div>
+                        <div class="student-row-name">Ryuto Kamiya</div>
+                        <div class="phone age2">
+                            <div>2</div>
+                        </div>
+                        <div class="arrival"></div>
+                        <div class="departure"></div>
+                        <div class="park-time"></div>
+                        <div class="park-time"></div>
+                        <div class="park-time"></div>
+                        <div class="park-time"></div>
+                    </div>
+                    <div class="real-row">
+                        <div></div>
+                        <div class="student-row-name">Takuto Cho</div>
+                        <div class="phone age1">
+                            <div>1</div>
+                        </div>
+                        <div class="arrival"></div>
+                        <div class="departure"></div>
+                        <div class="park-time"></div>
+                        <div class="park-time"></div>
+                        <div class="park-time"></div>
+                        <div class="park-time"></div>
+                    </div>
+                    <div class="real-row">
+                        <div></div>
+                        <div class="student-row-name">Sora Kobayashi</div>
+                        <div class="phone age1">
+                            <div>1</div>
+                        </div>
+                        <div class="arrival"></div>
+                        <div class="departure"></div>
+                        <div class="park-time"></div>
+                        <div class="park-time"></div>
+                        <div class="park-time"></div>
+                        <div class="park-time"></div>
+                    </div>
+                    <div class="real-row">
+                        <div></div>
+                        <div class="student-row-name">Saki Iemura</div>
+                        <div class="phone age2">
+                            <div>2</div>
+                        </div>
+                        <div class="arrival"></div>
+                        <div class="departure"></div>
+                        <div class="park-time"></div>
+                        <div class="park-time"></div>
+                        <div class="park-time"></div>
+                        <div class="park-time"></div>
+                    </div>
+
+
+                </div>
+
+                <div class="from-data">
+                    <div class="background-row">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="background-row">
+                        <div class="row-number">1</div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="background-row">
+                        <div class="row-number">2</div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="background-row">
+                        <div class="row-number">3</div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="background-row">
+                        <div class="row-number">4</div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="background-row">
+                        <div class="row-number">5</div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="background-row">
+                        <div class="row-number">6</div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+
+                    <div class="background-row">
+                        <div class="row-number">7</div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="background-row">
+                        <div class="row-number">8</div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="background-row">
+                        <div class="row-number">9</div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="background-row">
+                        <div class="row-number">10</div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="background-row">
+                        <div class="row-number">11</div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="background-row">
+                        <div class="row-number">12</div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="background-row">
+                        <div class="row-number">13</div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="background-row">
+                        <div class="row-number">14</div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="background-row">
+                        <div class="row-number">15</div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="background-row">
+                        <div class="row-number">16</div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+
+                    <div class="background-row">
+                        <div class="row-number">17</div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="background-row">
+                        <div class="row-number">18</div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="background-row">
+                        <div class="row-number">19</div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="background-row">
+                        <div class="row-number">20</div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="extras">
+
+                        <div class="countings">
+                            <div class="left">
+                                <div class="counts-label">Student<br>Counts</div>
+                                <div>Present:</div>
+                                <div>Absent:</div>
+                                <div class="counts-label" style="grid-row: span 2;">Park<br>Notes</div>
+                                <div style="grid-column: span 2;">Location:</div>
+                                <div style="grid-column: span 2;">Paired with:</div>
+                            </div>
+                            <div class="right">
+                                <div class="age0">Age</div>
+                                <div class="age0">Age</div>
+                                <div class="age0">Age</div>
+                                <div class="age0">Age</div>
+                                <div style="grid-column: span 4;">Weather:</div>
+
+                                <div style="grid-column: span 4;">Who did the head counts?</div>
+                            </div>
+
+                        </div>
+
+                        Notes:
+                    </div>
+                    
+                </div>
+
+
+
+            </div>
+            <div class="code">
+                <div>
+                    Take a picture of this sheet and use the QR code to upload the image. Please "X" over the QR code
+                    when
+                    done.
+                </div>
+                <div class="barcode">
+                    <img src="{freshQRUrl}" alt="Barcode">
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="end">
+            Joy to the World American International School - 〒112-0002東京都文京区小石川5-11-17 2F - 03-5684-0247 -
+            joytotheworld.info
+        </div>
+    </div>
+
+
+</body>
+
+</html>
