@@ -104,8 +104,12 @@
 
             font-size: .85rem;
             text-align: right;
+            font-variation-settings: "wdth" 80;
         }
-
+        .top-row02 > div:nth-child(2) {
+    flex-grow: 1;  /* Takes up all available space */
+    text-align: center; /* Centers text inside */
+}
 
 
         .mid-row01,
@@ -266,7 +270,7 @@
         .trip {
             border-block-start: 1px solid black;
             font-family: var(--mono-font);
-            font-variation-settings: "wdth" 90;
+            font-variation-settings: "wdth" 80;
             ##trip_font_size##
 
         }
