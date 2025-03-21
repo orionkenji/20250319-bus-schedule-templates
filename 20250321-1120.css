@@ -12,12 +12,20 @@ body {
     height: 297mm;
 }
 
+.special-programs-body {
+
+    width: 297mm;
+    height: 210mm;
+}
+
 :root {
     --light-grey: #f0f0f0;
     --dark-grey: #d9d9d9;
     --mono-font: "Inconsolata", monospace;
-    --bus-color: #60a5fa;
-    --bus-color-light: #dbeafe;
+    --bus-color: ##bus_color_code##;
+    --bus-color-light: ##bus_color_code_light##;
+    --class-color: red;
+    --class-color-light: pink;
 }
 
 .sidebar {
@@ -40,9 +48,14 @@ body {
 
 .top-section,
 .mid-section,
-.end-section {
+.mid-section-special {
     margin: 0;
     padding: 0;
+}
+
+.end-section {
+    margin: 0;
+    padding: .25rem;
 }
 
 .mid-section {
@@ -53,6 +66,14 @@ body {
     grid-template-rows: auto auto 1fr auto;
 }
 
+.mid-section-special {
+    border: 1px solid black;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+}
+
 .top-row01,
 .end-row01 {
     display: flex;
@@ -60,6 +81,7 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+
 
 .top-row02 {
     display: grid;
@@ -73,20 +95,26 @@ body {
     font-size: 2.5rem;
 }
 
+
+
 .top-row02>div:nth-child(2) {
     text-align: center;
     /* Center the text inside */
 }
 
 .top-row02>div:nth-child(3) {
+
     font-size: .85rem;
     text-align: right;
     font-variation-settings: "wdth" 80;
 }
 
+
+
+
 .top-row01 {
     padding-block: 3px;
-    font-size: 1rem
+    font-size: .85rem
 }
 
 .AM,
@@ -103,6 +131,9 @@ body {
     padding: 0;
 }
 
+
+
+
 .mid-row01,
 .mid-row02,
 .mid-row03,
@@ -117,7 +148,10 @@ body {
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: stretch;
+
 }
+
+
 
 .mid-row01,
 .mid-row02,
@@ -126,9 +160,12 @@ body {
 }
 
 .mid-row-main-content {
+
     border-block-end: 1px solid black;
     display: grid;
-    grid-template-columns: max-content auto max-content 1fr 1fr .4fr;
+    grid-template-columns:
+        max-content auto max-content 1fr 1fr .4fr;
+
     align-content: start;
 }
 
@@ -136,8 +173,14 @@ body {
     border-block-end: 1px solid black;
 }
 
+
+
+
+
 .end-row01 {
     justify-content: center;
+
+
 }
 
 .instruction-number {
@@ -151,6 +194,7 @@ body {
     padding: 3px;
     align-self: center;
     font-size: 10px;
+
 }
 
 .signatures {
@@ -170,6 +214,7 @@ body {
     min-height: 10mm;
     font-size: .85em;
 }
+
 
 .mid-row03 {
     grid-column: 1;
@@ -193,6 +238,8 @@ body {
     /* Second column */
     grid-row: 1 / span 2;
     /* Start at row 1, span 2 rows */
+    min-width: 2mm;
+    aspect-ratio: 1 / 1;
 }
 
 .barcode img {
@@ -209,6 +256,7 @@ body {
     border: 1px solid black;
     padding: 3px;
     font-size: .6rem;
+
 }
 
 .warning-icon {
@@ -247,14 +295,19 @@ body {
     border-block-start: 1px solid black;
     font-family: var(--mono-font);
     font-variation-settings: "wdth" 80;
-    font-size: 1.2rem;
-    line-height: 1.6;
+    ##trip_font_size##
 }
+
+
+
+
 
 .trip-title {
     grid-column: span 6;
     background-color: var(--bus-color-light);
+
 }
+
 
 .flex-pick-up {
     width: 3mm;
@@ -262,18 +315,27 @@ body {
     position: absolute;
     display: flex;
     right: 0;
+
+
+
 }
 
 .name-box:has(.flex-pick-up)>div:first-child {
     padding-inline-end: 6px;
 }
 
+
+
 .student-row>div,
 .trip-title>div {
+
+
     padding-inline: 3mm;
 }
 
+
 .student-row>div:nth-child(n+3):nth-child(-n+5) {
+
     border-inline-end: 1px solid black;
 }
 
@@ -288,6 +350,168 @@ body {
 .name-box {
     display: grid;
     grid-template-columns: 1fr auto;
+
     align-items: center;
     position: relative;
+}
+
+div.content.wrapper {
+    border: 3mm solid var(--class-color-light);
+    padding: 6px;
+}
+
+.mid-row-special02 {
+    display: grid;
+    grid-template-columns: max-content max-content max-content max-content max-content max-content 1fr 1fr max-content min-content min-content min-content min-content;
+    ;
+}
+
+.mid-row-special-heading,
+.special-trip,
+.mid-row-special02>div,
+.special-student-row {
+    grid-column: span 13;
+    display: grid;
+    grid-template-columns: subgrid;
+
+    align-items: stretch;
+}
+
+.mid-row-heading-01 {
+    grid-column: span 2;
+}
+
+.mid-row-special02>.trip>.trip-title {
+    grid-column: span 13;
+}
+
+.mid-row-special02>.trip>div {
+    align-items: center;
+}
+
+
+
+.trip-title>div {
+    grid-column: span 13;
+}
+
+.index-number {
+
+    width: 1rem;
+}
+
+.svg-allergy {
+    width: .85rem;
+    height: .85rem;
+}
+.age{
+    
+    text-align: center;
+   justify-content: center;
+
+}
+.special-name-box {
+
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+
+.special-student-row>div {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    padding-inline: .25rem;
+}
+
+.bus-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.bus-ext {
+    justify-content: center;
+    text-align: center;
+}
+
+.index-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .7rem;
+    font-weight: 600;
+    aspect-ratio: 1/1;
+    justify-self: center;
+}
+
+.mid-row-special-heading {
+    text-align: center;
+
+}
+
+.mid-row-special-heading>div {
+    padding-inline: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .65rem;
+}
+
+.special-student-row>div {
+    padding-inline: .5rem;
+}
+
+.mid-row-special-heading>div:not(:last-child),
+.special-student-row>div:not(:last-child) {
+    border-inline-end:  1px solid black;
+}
+
+.mid-row-special-heading,
+.special-student-row {
+    border-block-end:  1px solid black;
+}
+
+.mid-row-special02 > div:first-child {
+    background-color: var(--dark-grey);
+}
+
+.mid-row-special02 > div:nth-child(even):not(:first-child) {
+    background-color: var(--light-grey);
+}
+
+.mid-row-special01{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: .85rem;
+    font-weight: 600;
+    padding: .5rem;
+    border-block-end: 1px solid black;
+}
+
+.mid-row-special03{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.take-pictures{
+    flex-grow: 1;
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.take-pictures>div:nth-child(2){
+    text-align: right;
+    font-size: .7rem;
+    
+}
+
+.class-color{
+    color:var(--class-color)
 }
