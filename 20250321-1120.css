@@ -24,8 +24,8 @@ body {
     --mono-font: "Inconsolata", monospace;
     --bus-color: ##bus_color_code##;
     --bus-color-light: ##bus_color_code_light##;
-    --class-color: red;
-    --class-color-light: pink;
+    --class-color: ##class_color_code##;
+    --class-color-light: ##class_color_code_light##;
 }
 
 .sidebar {
