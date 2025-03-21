@@ -14,7 +14,7 @@ body {
 .special-programs-body {
 
     width: 297mm;
-    height: 210mm;
+    height: 205mm;
 }
 
 :root {
@@ -140,7 +140,7 @@ body {
     display: flex;
     gap: 3px;
     align-items: stretch;
-    height: 100%;
+    
 }
 
 .qr-code-outer-section {
