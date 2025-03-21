@@ -15,6 +15,7 @@ body {
 
     width: 297mm;
     height: 205mm;
+    display:flex;
 }
 
 :root {
