@@ -515,3 +515,10 @@ div.content.wrapper {
 .class-color{
     color:var(--class-color)
 }
+
+.mid-row-heading-07,
+.mid-row-heading-08,
+.mid-row-heading-09,
+.mid-row-heading-010{
+    font-size: .6rem;
+}
