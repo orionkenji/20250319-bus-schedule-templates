@@ -520,5 +520,5 @@ div.content.wrapper {
 .mid-row-heading-08,
 .mid-row-heading-09,
 .mid-row-heading-010{
-    font-size: .6rem;
+    font-size: .6rem !important;
 }
