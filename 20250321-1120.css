@@ -8,14 +8,14 @@ body {
     font-weight: 400;
     font-style: normal;
     line-height: 1.1;
- 
+
 }
 
 .special-programs-body {
 
     width: 297mm;
     height: 205mm;
-    display:flex;
+    display: flex;
 }
 
 :root {
@@ -43,7 +43,7 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr auto;
-   
+
 }
 
 .top-section,
@@ -141,7 +141,7 @@ body {
     display: flex;
     gap: 3px;
     align-items: stretch;
-    
+
 }
 
 .qr-code-outer-section {
@@ -400,16 +400,21 @@ div.content.wrapper {
     width: 1rem;
 }
 
+
 .svg-allergy {
-    width: .85rem;
-    height: .85rem;
+    width: .75rem;
+    height: .75rem;
+    display: flex;
+    align-items: center;
 }
-.age{
-    
+
+.age {
+
     text-align: center;
-   justify-content: center;
+    justify-content: center;
 
 }
+
 .special-name-box {
 
     justify-content: space-between;
@@ -468,23 +473,23 @@ div.content.wrapper {
 
 .mid-row-special-heading>div:not(:last-child),
 .special-student-row>div:not(:last-child) {
-    border-inline-end:  1px solid black;
+    border-inline-end: 1px solid black;
 }
 
 .mid-row-special-heading,
 .special-student-row {
-    border-block-end:  1px solid black;
+    border-block-end: 1px solid black;
 }
 
-.mid-row-special02 > div:first-child {
+.mid-row-special02>div:first-child {
     background-color: var(--dark-grey);
 }
 
-.mid-row-special02 > div:nth-child(even):not(:first-child) {
+.mid-row-special02>div:nth-child(even):not(:first-child) {
     background-color: var(--light-grey);
 }
 
-.mid-row-special01{
+.mid-row-special01 {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -494,12 +499,12 @@ div.content.wrapper {
     border-block-end: 1px solid black;
 }
 
-.mid-row-special03{
+.mid-row-special03 {
     display: flex;
     flex-wrap: nowrap;
 }
 
-.take-pictures{
+.take-pictures {
     flex-grow: 1;
     padding: .5rem;
     display: flex;
@@ -507,19 +512,19 @@ div.content.wrapper {
     justify-content: space-between;
 }
 
-.take-pictures>div:nth-child(2){
+.take-pictures>div:nth-child(2) {
     text-align: right;
     font-size: .7rem;
-    
+
 }
 
-.class-color{
-    color:var(--class-color)
+.class-color {
+    color: var(--class-color)
 }
 
 .mid-row-heading-07,
 .mid-row-heading-08,
 .mid-row-heading-09,
-.mid-row-heading-010{
+.mid-row-heading-010 {
     font-size: .6rem !important;
 }
