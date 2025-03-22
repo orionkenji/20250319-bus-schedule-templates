@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="inside-out.css">
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="red-house-svg" viewBox="0 0 576 512">
+            <path fill="#e93337"
+                d="M543.8 287.6c17 0 32-14 32-32.1c1-9-3-17-11-24L309.5 7c-6-5-14-7-21-7s-15 1-22 8L10 231.5c-7 7-10 15-10 24c0 18 14 32.1 32 32.1l32 0 0 160.4c0 35.3 28.7 64 64 64l320.4 0c35.5 0 64.2-28.8 64-64.3l-.7-160.2 32 0zM256 208c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 48 48 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-48 0 0 48c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-48-48 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16l48 0 0-48z" />
+        </symbol>
+    </svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="bus-icon" viewBox="0 0 512 512">
+            <path fill="currentColor" opacity=".4"
+                d="M64 448l0 32c0 17.7 14.3 32 32 32l32 0c17.7 0 32-14.3 32-32l0-32-96 0zm48.2-291.3c-.1 .5-.1 1.1-.1 1.6s0 1.1 0 1.6c0 21.3 0 42.7 0 64c0 .6 0 1.1 0 1.7s.1 1.1 .1 1.6c.1 1.1 .3 2.1 .5 3.2c.4 2.1 1.1 4.1 1.9 6c1.6 3.8 4 7.3 6.9 10.2c5.8 5.8 13.8 9.4 22.6 9.4l96 0 0-128-96 0c-8.8 0-16.8 3.6-22.6 9.4c-2.9 2.9-5.2 6.3-6.9 10.2c-.8 1.9-1.4 3.9-1.9 6c-.2 1-.4 2.1-.5 3.2zM272 128l0 128 96 0c17.7 0 32-14.3 32-32l0-64c0-17.7-14.3-32-32-32l-96 0zm80 320l0 32c0 17.7 14.3 32 32 32l32 0c17.7 0 32-14.3 32-32l0-32-96 0z" />
+            <path fill="currentColor"
+                d="M256 0C380.8 0 464 35.2 464 80l0 16 0 16 16 0c17.7 0 32 14.3 32 32l0 64c0 17.7-14.3 32-32 32l-16 0 0 20.3c9.6 5.5 16 15.9 16 27.7l0 128c0 17.7-14.3 32-32 32L64 448c-17.7 0-32-14.3-32-32l0-128c0-11.8 6.4-22.2 16-27.7L48 240l-16 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l16 0 0-16 0-16C48 35.2 131.2 0 256 0zM112 160l0 64c0 17.7 14.3 32 32 32l96 0 0-128-96 0c-17.7 0-32 14.3-32 32zm160 96l96 0c17.7 0 32-14.3 32-32l0-64c0-17.7-14.3-32-32-32l-96 0 0 128zM112 384a32 32 0 1 0 0-64 32 32 0 1 0 0 64zm288 0a32 32 0 1 0 0-64 32 32 0 1 0 0 64zM352 80c0-8.8-7.2-16-16-16L176 64c-8.8 0-16 7.2-16 16s7.2 16 16 16l160 0c8.8 0 16-7.2 16-16z" />
+        </symbol>
+    </svg>
+
+</head>
+
+<body>
+    <div class="xx-age-box-holder">
+        <div class="number-box age-00"><span>0</span></div>
+        <div class="number-box age-01"><span>1</span></div>
+        <div class="number-box age-02"><span>2</span></div>
+        <div class="number-box age-03"><span>3</span></div>
+        <div class="number-box age-04"><span>4</span></div>  
+        <div class="number-box age-05"><span>5</span></div>
+        <div class="number-box age-06"><span>6</span></div>
+        <div class="number-box age-07"><span>7</span></div>
+        <div class="number-box age-08"><span>8</span></div>
+    </div>
+
+    <div class="xx-age-box-holder">
+        <div class="number-box"><span>0</span></div>
+        <div class="number-box"><span>1</span></div>
+        <div class="number-box"><span>2</span></div>
+        <div class="number-box"><span>3</span></div>
+        <div class="number-box"><span>4</span></div>
+    </div>
+
+    <div class="student-name-box">
+        <div>Kenji Szczepanski</div><svg class="svg-allergy-icon">
+            <use href="#red-house-svg"></use>
+        </svg>
+    </div>
+
+    <div class="phone-number">090-9822-0328</div>
+
+
+    <div class="bus_ext_box">
+        <svg class="blue-bus-icon">
+            <use href="#bus-icon"></use>
+        </svg><div class="bus-ext-time">7:15 AM</div>
+    </div>
+    <div class="bus_ext_box">
+        <svg class="yellow-bus-icon">
+            <use href="#bus-icon"></use>
+        </svg><div class="bus-ext-time">7:15 AM</div>
+
+    </div>
+    <div class="bus_ext_box">
+        <svg class="special-bus-icon">
+            <use href="#bus-icon"></use>
+        </svg><div class="bus-ext-time">7:15 AM</div>
+    </div>
+
+</body>
+
+</html>

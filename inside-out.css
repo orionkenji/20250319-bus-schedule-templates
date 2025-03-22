@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Sono:wght,MONO@200..800,0..1&display=swap');
+
+
+:root {
+
+    --bus-icon-size: 1rem;
+
+    --special-bus-light: hsl(322, 84%, 86%);
+    --special-bus-dark: hsl(322, 79%, 63%);
+    --blue-bus-light: hsl(201, 92%, 82%);
+    --blue-bus-dark: hsl(201, 89%, 55%);
+    --yellow-bus-light: hsl(54, 98%, 76%);
+    --yellow-bus-dark: hsl(45, 96%, 53%);
+
+
+    --border-solid-black: 1px solid black;
+    --mono-font: "Sono", monospace;
+
+    --age-00-light: #fed7d7;
+    --age-00-medium: #fc8181;
+    --age-00-dark: #c53030;
+
+    --age-01-light: #feebc8;
+    --age-01-medium: #f6ad55;
+    --age-01-dark: #c05621;
+
+    --age-02-light: #fefcbf;
+    --age-02-medium: #f6e05e;
+    --age-02-dark: #b7791f;
+
+    --age-03-light: #c6f6d5;
+    --age-03-medium: #68d391;
+    --age-03-dark: #2f855a;
+
+    --age-04-light: #b2f5ea;
+    --age-04-medium: #4fd1c5;
+    --age-04-dark: #2c7a7b;
+
+    --age-05-light: #c4f1f9;
+    --age-05-medium: #76e4f7;
+    --age-05-dark: #00a3c4;
+
+    --age-06-light: #bee3f8;
+    --age-06-medium: #63b3ed;
+    --age-06-dark: #2b6cb0;
+
+    --age-07-light: #e9d8fd;
+    --age-07-medium: #b794f4;
+    --age-07-dark: #6b46c1;
+
+    --age-08-light: #fed7e2;
+    --age-08-medium: #f687b3;
+    --age-08-dark: #b83280;
+
+    
+}
+
+.blue-bus-icon use {
+    color: var(--blue-bus-dark);
+}
+
+.yellow-bus-icon use {
+    color: var(--yellow-bus-dark);
+}
+
+.special-bus-icon use {
+    color: var(--special-bus-dark);
+}
+
+.blue-bus-icon,
+.yellow-bus-icon,
+.special-bus-icon{
+    height: var(--bus-icon-size);
+    width: var(--bus-icon-size);
+}
+
+
+body {
+    font-size: 18px;
+    font-family: var(--mono-font);
+}
+
+/* #region Age Box Styles */
+.age-00 {
+    background-color: var(--age-00-light);
+    color: var(--age-00-dark);
+}
+
+.age-01 {
+    background-color: var(--age-01-light);
+    color: var(--age-01-dark);
+}
+
+.age-02 {
+    background-color: var(--age-02-light);
+    color: var(--age-02-dark);
+}
+
+.age-03 {
+    background-color: var(--age-03-light);
+    color: var(--age-03-dark);
+}
+
+.age-04 {
+    background-color: var(--age-04-light);
+    color: var(--age-04-dark);
+}
+
+.age-05 {
+    background-color: var(--age-05-light);
+    color: var(--age-05-dark);
+}
+
+.age-06 {
+    background-color: var(--age-06-light);
+    color: var(--age-06-dark);
+}
+
+.age-07 {
+    background-color: var(--age-07-light);
+    color: var(--age-07-dark);
+}
+
+.age-08 {
+    background-color: var(--age-08-light);
+    color: var(--age-08-dark);
+}
+
+
+/* #endregion */
+
+.svg-allergy-icon {
+    height: 1rem;
+    width: 1rem;
+
+}
+
+.sono {
+    font-family: "Sono", monospace;
+    font-optical-sizing: auto;
+    
+    font-variation-settings:
+      "MONO" 1;
+  }
+  
+
+.age-box {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    aspect-ratio: 1 / 1;
+}
+
+.number-box {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    aspect-ratio: 1 / 1;
+
+    border-block: var(--border-solid-black);
+    border-inline: var(--border-solid-black);
+
+}
+
+.xx-age-box-holder {
+    width: 2rem;
+    aspect-ratio: 1;
+    outline: 1px black solid;
+    outline-offset: 3px;
+    margin: 1rem;
+}
+
+
+.student-name-box {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.bus_ext_box{
+    display: flex;
+    align-items: center;
+    gap:.25rem;
+}
