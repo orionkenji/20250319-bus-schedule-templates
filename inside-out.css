@@ -1,10 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Sono:wght,MONO@200..800,0..1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wdth,wght@50..200,200..900&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures the box-sizing is consistent across elements */
+}
 
 
 :root {
 
-    --bus-icon-size: 1rem;
+    --basic-border: 1px solid var(--grey-300);
 
+    --largest-font-size: 2.2rem;
+    --bus-icon-size: .75rem;
     --special-bus-light: hsl(322, 84%, 86%);
     --special-bus-dark: hsl(322, 79%, 63%);
     --blue-bus-light: hsl(201, 92%, 82%);
@@ -12,177 +23,879 @@
     --yellow-bus-light: hsl(54, 98%, 76%);
     --yellow-bus-dark: hsl(45, 96%, 53%);
 
+    --mono-font: "Inconsolata", monospace;
+    --age-00-light: hsl(0, 95%, 91%);
+    --age-00-medium: hsl(0, 97%, 74%);
+    --age-00-dark: hsl(0, 77%, 42%);
+    --age-01-light: hsl(33, 97%, 88%);
+    --age-01-medium: hsl(32, 91%, 65%);
+    --age-01-dark: hsl(24, 69%, 44%);
+    --age-02-light: hsl(54, 97%, 87%);
+    --age-02-medium: hsl(45, 91%, 66%);
+    --age-02-dark: hsl(35, 77%, 41%);
+    --age-03-light: hsl(142, 76%, 93%);
+    --age-03-medium: hsl(142, 67%, 62%);
+    --age-03-dark: hsl(142, 50%, 33%);
+    --age-04-light: hsl(170, 76%, 85%);
+    --age-04-medium: hsl(174, 67%, 56%);
+    --age-04-dark: hsl(180, 47%, 33%);
+    --age-05-light: hsl(195, 89%, 87%);
+    --age-05-medium: hsl(195, 91%, 71%);
+    --age-05-dark: hsl(195, 100%, 38%);
+    --age-06-light: hsl(210, 89%, 86%);
+    --age-06-medium: hsl(210, 84%, 63%);
+    --age-06-dark: hsl(217, 58%, 42%);
+    --age-07-light: hsl(263, 95%, 91%);
+    --age-07-medium: hsl(263, 89%, 73%);
+    --age-07-dark: hsl(263, 58%, 47%);
+    --age-08-light: hsl(330, 95%, 91%);
+    --age-08-medium: hsl(330, 89%, 73%);
+    --age-08-dark: hsl(330, 58%, 47%);
 
-    --border-solid-black: 1px solid black;
-    --mono-font: "Sono", monospace;
+    /* Greys */
+    --grey-100: #f4f4f5;
+    --light-grey: var(--grey-100);
+    --grey-200: #e4e4e7;
+    --grey-300: #d4d4d8;
+    --dark-grey: var(--grey-300);
+    --grey-400: #a1a1aa;
+    --grey-500: #71717a;
+    --grey-600: #52525b;
+    --grey-700: #3f3f46;
+    --grey-800: #27272a;
+    --grey-900: #18181b;
 
-    --age-00-light: #fed7d7;
-    --age-00-medium: #fc8181;
-    --age-00-dark: #c53030;
+    /* PreK */
+    --prek-100: #ffedd5;
+    --prek-200: #fed7aa;
+    --prek-300: #fdba74;
+    --prek-400: #fb923c;
+    --prek-500: #f97316;
+    --prek-main: var(--prek-500);
+    --prek-600: #ea580c;
+    --prek-700: #c2410c;
+    --prek-800: #9a3412;
+    --prek-900: #7c2d12;
 
-    --age-01-light: #feebc8;
-    --age-01-medium: #f6ad55;
-    --age-01-dark: #c05621;
+    /* Joy Tots */
+    --jt-100: #fef9c3;
+    --jt-200: #fef08a;
+    --jt-300: #fde047;
+    --jt-400: #facc15;
+    --jt-500: #eab308;
+    --jt-main: var(--jt-500);
+    --jt-600: #ca8a04;
+    --jt-700: #a16207;
+    --jt-800: #854d0e;
+    --jt-900: #713f12;
 
-    --age-02-light: #fefcbf;
-    --age-02-medium: #f6e05e;
-    --age-02-dark: #b7791f;
+    /* AIDLC */
+    --aidlc-100: #ecfccb;
+    --aidlc-200: #d9f99d;
+    --aidlc-300: #bef264;
+    --aidlc-400: #a3e635;
+    --aidlc-500: #84cc16;
+    --aidlc-main: var(--aidlc-500);
+    --aidlc-600: #65a30d;
+    --aidlc-700: #4d7c0f;
+    --aidlc-800: #3f6212;
+    --aidlc-900: #365314;
 
-    --age-03-light: #c6f6d5;
-    --age-03-medium: #68d391;
-    --age-03-dark: #2f855a;
+    /* K1 */
+    --k1-100: #ffe4e6;
+    --k1-200: #fecdd3;
+    --k1-300: #fda4af;
+    --k1-400: #fb7185;
+    --k1-500: #f43f5e;
+    --k1-main: var(--k1-500);
+    --k1-600: #e11d48;
+    --k1-700: #be123c;
+    --k1-800: #9f1239;
+    --k1-900: #881337;
 
-    --age-04-light: #b2f5ea;
-    --age-04-medium: #4fd1c5;
-    --age-04-dark: #2c7a7b;
+    /* K2 */
+    --k2-100: #dcfce7;
+    --k2-200: #bbf7d0;
+    --k2-300: #86efac;
+    --k2-400: #4ade80;
+    --k2-500: #22c55e;
+    --k2-main: var(--k2-500);
+    --k2-600: #16a34a;
+    --k2-700: #15803d;
+    --k2-800: #166534;
+    --k2-900: #14532d;
 
-    --age-05-light: #c4f1f9;
-    --age-05-medium: #76e4f7;
-    --age-05-dark: #00a3c4;
+    /* K3 */
+    --k3-100: #dbeafe;
+    --k3-200: #bfdbfe;
+    --k3-300: #93c5fd;
+    --k3-400: #60a5fa;
+    --k3-500: #3b82f6;
+    --k3-main: var(--k3-500);
+    --k3-600: #2563eb;
+    --k3-700: #1d4ed8;
+    --k3-800: #1e40af;
+    --k3-900: #1e3a8a;
 
-    --age-06-light: #bee3f8;
-    --age-06-medium: #63b3ed;
-    --age-06-dark: #2b6cb0;
+    /* Afterschool Kindergarten (AK) */
+    --ak-100: #fae8ff;
+    --ak-200: #f5d0fe;
+    --ak-300: #f0abfc;
+    --ak-400: #e879f9;
+    --ak-500: #d946ef;
+    --ak-main: var(--ak-500);
+    --ak-600: #c026d3;
+    --ak-700: #a21caf;
+    --ak-800: #86198f;
+    --ak-900: #701a75;
 
-    --age-07-light: #e9d8fd;
-    --age-07-medium: #b794f4;
-    --age-07-dark: #6b46c1;
+    /* Afterschool Elementary (AE) */
+    --ae-100: #f3e8ff;
+    --ae-200: #e9d5ff;
+    --ae-300: #d8b4fe;
+    --ae-400: #c084fc;
+    --ae-500: #a855f7;
+    --ae-main: var(--ae-500);
+    --ae-600: #9333ea;
+    --ae-700: #7e22ce;
+    --ae-800: #6b21a8;
+    --ae-900: #581c87;
 
-    --age-08-light: #fed7e2;
-    --age-08-medium: #f687b3;
-    --age-08-dark: #b83280;
-
-    
 }
 
-.blue-bus-icon use {
-    color: var(--blue-bus-dark);
-}
-
-.yellow-bus-icon use {
-    color: var(--yellow-bus-dark);
-}
-
-.special-bus-icon use {
-    color: var(--special-bus-dark);
-}
-
-.blue-bus-icon,
-.yellow-bus-icon,
-.special-bus-icon{
-    height: var(--bus-icon-size);
-    width: var(--bus-icon-size);
-}
-
-
-body {
-    font-size: 18px;
-    font-family: var(--mono-font);
-}
 
 /* #region Age Box Styles */
+
+.number-box.age-00,
+.number-box.age-01,
+.number-box.age-02,
+.number-box.age-03,
+.number-box.age-04,
+.number-box.age-05,
+.number-box.age-06,
+.number-box.age-07,
+.number-box.age-08 {
+    font-weight: 600;
+    padding-inline: .5rem;
+    font-family: var(--mono-font);
+    font-size: 1.125rem;
+    line-height: 0;
+
+}
+
 .age-00 {
     background-color: var(--age-00-light);
     color: var(--age-00-dark);
+    border-inline: var(--basic-border);
 }
 
 .age-01 {
     background-color: var(--age-01-light);
     color: var(--age-01-dark);
+    border-inline: var(--basic-border);
 }
 
 .age-02 {
     background-color: var(--age-02-light);
     color: var(--age-02-dark);
+    border-inline: var(--basic-border);
 }
 
 .age-03 {
     background-color: var(--age-03-light);
     color: var(--age-03-dark);
+    border-inline: var(--basic-border);
 }
 
 .age-04 {
     background-color: var(--age-04-light);
     color: var(--age-04-dark);
+    border-inline: var(--basic-border);
 }
 
 .age-05 {
     background-color: var(--age-05-light);
     color: var(--age-05-dark);
+    border-inline: var(--basic-border);
 }
 
 .age-06 {
     background-color: var(--age-06-light);
     color: var(--age-06-dark);
+    border-inline: var(--basic-border);
 }
 
 .age-07 {
     background-color: var(--age-07-light);
     color: var(--age-07-dark);
+    border-inline: var(--basic-border);
 }
 
 .age-08 {
     background-color: var(--age-08-light);
     color: var(--age-08-dark);
+    border-inline: var(--basic-border);
 }
-
 
 /* #endregion */
 
-.svg-allergy-icon {
-    height: 1rem;
-    width: 1rem;
-
+/* #region Class Colors */
+.pk-main {
+    color: var(--prek-main);
 }
 
-.sono {
-    font-family: "Sono", monospace;
-    font-optical-sizing: auto;
-    
-    font-variation-settings:
-      "MONO" 1;
-  }
+.jt-main {
+    color: var(--jt-main);
+}
+
+.aidlc-main {
+    color: var(--aidlc-main);
+}
+
+.k1-main {
+    color: var(--k1-main);
+}
+
+.k2-main {
+    color: var(--k2-main);
+}
+
+.k3-main {
+    color: var(--k3-main);
+}
+
+.ak-main {
+    color: var(--ak-main);
+}
+
+.ae-main {
+    color: var(--ae-main);
+}
+
+/* #endregion */
+
+/* #region Bus Styles */
+.svg-bus-icon-blue use {
+    color: var(--blue-bus-dark);
+}
+
+.svg-bus-icon-yellow use {
+    color: var(--yellow-bus-dark);
+}
+
+.svg-bus-icon-special use {
+    color: var(--special-bus-dark);
+}
+
+.pm-extended-icon,
+.am-extended-icon,
+.svg-bus-icon-blue,
+.svg-bus-icon-yellow,
+.svg-bus-icon-special,
+.svg-medical-icon,
+.svg-allergy-icon,
+.svg-lunch-icon,
+.ae-class-icon,
+.ak-class-icon {
+    height: var(--bus-icon-size);
+    width: var(--bus-icon-size);
+}
+
+/* #endregion */
+
+body {
+    font-size: 16px;
+    box-sizing: border-box;
   
-
-.age-box {
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 600;
-    aspect-ratio: 1 / 1;
 }
+
+
+.a4-portrait {
+    width: 210mm;
+    height: 297mm;
+}
+
+.a4-landscape {
+    width: 297mm;
+    height: 210mm;
+}
+
+
+
+.ae-class-icon {
+    color: var(--ae-main);
+}
+
+.ak-class-icon {
+    color: var(--ak-main);
+}
+
+.pm-extended-icon,
+.am-extended-icon {
+    color: var(--k2-800)
+}
+
+.property-of {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    align-items: center;
+    gap: .5rem;
+
+    border-radius: .3rem;
+    background-color: white;
+    border: 1px solid var(--age-00-dark);
+
+    container-type: inline-size;
+}
+
+.property-of-text {
+
+    font-size: 9px;
+
+
+
+}
+
+.attendance-header {
+    display: grid;
+    grid-template-columns: max-content max-content 1fr;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 16px;
+}
+
+.property-of-icon {
+    width: 100%;
+    height: auto;
+    max-width: 8mm;
+    max-height: 8mm;
+
+    aspect-ratio: 1;
+    color: var(--age-00-dark);
+}
+
+
+
+
+.svg-medical-icon {
+    color: var(--k3-600);
+}
+
+.svg-lunch-icon {
+    color: var(--aidlc-600);
+}
+
+.svg-allergy-icon {
+    color: var(--k1-600);
+}
+
+.svg-allergy-icon-instruction {
+    height: .7rem;
+    width: .7rem;
+    margin: 0;
+    padding: 0;
+
+}
+
+.logo-img {
+    height: 1cm;
+    width: auto;
+}
+
 
 .number-box {
 
+
+    font-weight: 300;
+
+
+    justify-content: center;
+    line-height: 1;
+
+}
+
+
+.student-row>div {
     display: flex;
     align-items: center;
-    justify-content: center;
-    font-weight: 600;
-    aspect-ratio: 1 / 1;
-
-    border-block: var(--border-solid-black);
-    border-inline: var(--border-solid-black);
 
 }
 
-.xx-age-box-holder {
-    width: 2rem;
-    aspect-ratio: 1;
-    outline: 1px black solid;
-    outline-offset: 3px;
-    margin: 1rem;
-}
-
-
-.student-name-box {
+.allergy-medical-icons,
+.lunch,
+.bus-ext-box-arrive,
+.bus-ext-box-depart {
     display: flex;
-    justify-content: space-between;
+    gap: 2px;
+    padding-inline: 4px;
+
+}
+
+
+.bus-ext-box-arrive,
+.bus-ext-box-depart {
+    border-inline-end: var(--basic-border);
     
 }
 
-.bus_ext_box{
+.bus-ext-box-arrive {
+   
+    white-space: pre;
+}
+
+.lunch {
+    color: var(--aidlc-600);
+}
+
+.student-name-box {
+    padding-inline: .5rem;
+}
+
+.class-date-header {
+    display: grid;
+    grid-template-columns: 5rem 10fr 5rem;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    font-size: var(--largest-font-size);
+    padding-block-start: 0.5rem;
+    line-height: 1;
+    white-space: pre;
+    font-family: var(--mono-font);
+
+}
+
+
+.class-name {
+
+    font-weight: 600;
+
+
+}
+
+.day-date {
+    text-align: center;
+
+}
+
+.term-index-week {
+    font-size: calc(var(--largest-font-size) / 2.5);
+    text-align: right;
+    direction: rtl;
+
+}
+
+.teachers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+
+
+}
+
+.teacher-box {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: stretch;
+    justify-items: start;
+    font-size: .7rem;
+    padding: 0.5rem;
+    column-gap: .5rem;
+
+    font-family: "Noto Sans JP", sans-serif;
+
+    line-height: 1.2;
+}
+
+.status-box {
+    width: 2lh;
+    height: 2lh;
+    border: var(--basic-border);
+
+
+    background-color: white;
+
+
+}
+
+.teacher-box-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+
+
+
+
+.teacher-position {
+    color: var(--grey-400);
+    font-size: .6rem;
+
+}
+
+
+
+
+
+.attendance-body-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto 1fr auto;
+  
+    padding: 6px;
+
+}
+
+.border-class-pk {
+    border: 3mm solid var(--prek-300);
+}
+
+.border-class-k1 {
+    border: 3mm solid var(--k1-300);
+}
+
+.border-class-ae {
+    border: 3mm solid var(--ae-300);
+}
+
+.attendance-main-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+
+    border-block-start: var(--basic-border);
+    height: 100%;
+
+
+
+}
+
+.asthma{
+    padding-block-end:.25rem;
+}
+
+.park-box.last,
+.student-row-space.last {
+    border-inline-end: none;
+}
+
+.last{
     display: flex;
     align-items: center;
-    gap:.25rem;
+    justify-content: center;
+}
+
+.attendance-footer {
+    font-size: .85rem;
+    text-align: center;
+    font-family: "Noto Sans JP", sans-serif;
+    padding-block: .25rem;
+}
+
+.attendance-grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto 1fr 1fr auto auto auto auto;
+
+    height: 100%;
+    align-content: start;
+
+
+
+
+}
+
+.attendance-grid.allergy-medical-grid {
+    grid-template-columns: auto auto auto auto auto 1fr auto;}
+
+
+.legend-row {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-template-rows: auto auto;
+    grid-column: span 10;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 12px;
+    line-height: 1;
+    border-block-end: var(--basic-border);
+}
+
+.legend-row>div {
+    background-color: var(--light-grey);
+
+    display: flex;
+    align-items: end;
+    justify-content: center;
+
+    padding-inline: .5rem;
+
+}
+
+.legend-student,
+.legend-arrive,
+.legend-depart {
+    padding-block: .25rem;
+}
+
+.legend-row>div.legend-arrive,
+.legend-row>div.legend-depart {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.legend-arrive>div:first-child,
+.legend-depart>div:first-child {
+    flex-basis: 100%;
+}
+
+.legend-student {
+
+    grid-column: span 4;
+    border-inline-end: var(--basic-border);
+
+}
+
+
+
+.legend-student.allergy-student{
+    grid-column: span 3;
+}
+
+.student-row.allergy-student-row{
+    grid-column: span 6;
+}   
+
+.park-box {
+
+    font-size: 8px;
+    text-align: center;
+
+    border-inline-end: var(--basic-border);
+    padding-block: .25rem;
+}
+
+.student-row {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-column: span 10;
+
+    align-items: stretch;
+    border-block-end: var(--basic-border);
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 14px;
+    min-height: 1.4lh;
+
+}
+
+
+.allergy-sheet-english-text{
+    padding: .25rem;
+}
+
+
+
+.teachers>div:last-child {
+
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    column-gap: .5rem;
+
+    grid-auto-flow: column;
+
+}
+
+.teachers>div:last-child>div {
+
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+}
+
+
+
+
+
+
+
+
+
+.legend-depart {
+    border-inline-end: var(--basic-border);
+}
+
+.legend-arrive {
+    border-inline-end: var(--basic-border);
+}
+
+
+.legend-arrive-time,
+.legend-arrive-contact,
+.legend-depart-contact,
+.legend-depart-time {
+    font-size: 10px;
+    font-style: italic;
+    padding-block: .25rem;
+}
+
+
+.student-row-space {
+    border-inline-end: var(--basic-border);
+}
+
+
+.student-row:nth-child(odd) {
+    background-color: var(--grey-100);
+}
+
+
+
+.notes-box {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    font-size: .8rem;
+
+}
+
+.note-space {
+    padding: .5rem;
+}
+
+.student-count-wrapper {
+    display: flex;
+    justify-items: stretch;
+    align-items: stretch;
+
+    height: 2.5lh;
+    border-block-end: var(--basic-border);
+
+
+
+}
+
+.student-count-wrapper>div {
+    flex-grow: 1;
+    padding: .5rem;
+
+    border-inline-end: var(--basic-border);
+    border-inline-start: none;
+}
+
+.student-count-wrapper>div:last-child {
+
+    border-inline-end: none;
+}
+
+
+
+.park-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    border-block-end: var(--basic-border);
+
+
+}
+
+.park-wrapper>div {
+    border-inline-end: var(--basic-border);
+   
+}   
+
+.park-wrapper>div:nth-child(n+2) {
+    padding-inline: 1rem;}
+
+
+
+
+
+.park-location-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    
+  padding-inline-start: .5rem;
+    gap: .25rem;
+    padding-block: .5rem;}
+    
+
+.weather-box,
+.temperature-box {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    justify-content: space-around;
+   
+}
+
+
+.temperature-box {
+    justify-content: space-between;
+}
+
+.weather-icon-sunny,
+.weather-icon-partly-cloudy {
+    color: var(--prek-300);
+}
+
+.weather-icon-cloudy {
+    color: var(--grey-500);
+}
+
+.weather-icon-rainy {
+    color: var(--blue-bus-dark);
+}
+
+
+
+.weather-icon-partly-cloudy,
+.weather-icon-sunny,
+.weather-icon-cloudy,
+.weather-icon-rainy {
+    height: 1.75lh;
+    width: 1.75lh;
+}
+
+.weather-icon-temperature {
+    height: auto;
+    width: 1lh;
+    color: var(--k1-900);
+}
+
+.temperature-box>div:last-child {
+    font-size: 1.25rem;
+}
+
+.paired-with-box {
+    display: flex;
+    align-items: center;
+    font-family: var(--mono-font);
+    justify-content: space-around;
+    font-size: 1.5rem;
+    gap: .5rem;
+    font-variation-settings:
+    "wdth" 80;
+    
+}
+
+
+.barcode-wrapper {
+    height: 25mm;
+   width: 25mm;
+   background-color: var(--light-grey);
+   border: var(--basic-border);
+   
+}
+.barcode-section {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    gap: 1rem;
+    font-size: .7rem;
+
+    
 }

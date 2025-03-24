@@ -7,69 +7,803 @@
     <title>Document</title>
     <link rel="stylesheet" href="inside-out.css">
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-        <symbol id="red-house-svg" viewBox="0 0 576 512">
-            <path fill="#e93337"
-                d="M543.8 287.6c17 0 32-14 32-32.1c1-9-3-17-11-24L309.5 7c-6-5-14-7-21-7s-15 1-22 8L10 231.5c-7 7-10 15-10 24c0 18 14 32.1 32 32.1l32 0 0 160.4c0 35.3 28.7 64 64 64l320.4 0c35.5 0 64.2-28.8 64-64.3l-.7-160.2 32 0zM256 208c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 48 48 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-48 0 0 48c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-48-48 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16l48 0 0-48z" />
+        <symbol id="allergy-svg" viewBox="0 0 512 512">
+            <path fill="currentColor"
+                d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-400c9.1 0 17.4 5.1 21.5 13.3l104 208c5.9 11.9 1.1 26.3-10.7 32.2s-26.3 1.1-32.2-10.7L321.2 320l-130.3 0-17.4 34.7c-5.9 11.9-20.3 16.7-32.2 10.7s-16.7-20.3-10.7-32.2l104-208c4.1-8.1 12.4-13.3 21.5-13.3zm0 77.7L214.8 272l82.3 0L256 189.7z" />
         </symbol>
     </svg>
 
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-        <symbol id="bus-icon" viewBox="0 0 512 512">
+        <symbol id="medical-svg" viewBox="0 0 512 512">
+            <path fill="currentColor"
+                d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM171.5 137.9L256 255l84.5-117.1c6.1-8.4 16.9-12 26.8-8.8s16.6 12.4 16.6 22.8l0 208c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-133.8-60.5 83.8c-4.5 6.2-11.7 9.9-19.5 9.9s-14.9-3.7-19.5-9.9L176 226.2 176 360c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-208c0-10.4 6.7-19.6 16.6-22.8s20.7 .3 26.8 8.8z" />
+        </symbol>
+    </svg>
+    <svg xmlns=" http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="bus-svg" viewBox="0 0 512 512">
             <path fill="currentColor" opacity=".4"
                 d="M64 448l0 32c0 17.7 14.3 32 32 32l32 0c17.7 0 32-14.3 32-32l0-32-96 0zm48.2-291.3c-.1 .5-.1 1.1-.1 1.6s0 1.1 0 1.6c0 21.3 0 42.7 0 64c0 .6 0 1.1 0 1.7s.1 1.1 .1 1.6c.1 1.1 .3 2.1 .5 3.2c.4 2.1 1.1 4.1 1.9 6c1.6 3.8 4 7.3 6.9 10.2c5.8 5.8 13.8 9.4 22.6 9.4l96 0 0-128-96 0c-8.8 0-16.8 3.6-22.6 9.4c-2.9 2.9-5.2 6.3-6.9 10.2c-.8 1.9-1.4 3.9-1.9 6c-.2 1-.4 2.1-.5 3.2zM272 128l0 128 96 0c17.7 0 32-14.3 32-32l0-64c0-17.7-14.3-32-32-32l-96 0zm80 320l0 32c0 17.7 14.3 32 32 32l32 0c17.7 0 32-14.3 32-32l0-32-96 0z" />
             <path fill="currentColor"
                 d="M256 0C380.8 0 464 35.2 464 80l0 16 0 16 16 0c17.7 0 32 14.3 32 32l0 64c0 17.7-14.3 32-32 32l-16 0 0 20.3c9.6 5.5 16 15.9 16 27.7l0 128c0 17.7-14.3 32-32 32L64 448c-17.7 0-32-14.3-32-32l0-128c0-11.8 6.4-22.2 16-27.7L48 240l-16 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l16 0 0-16 0-16C48 35.2 131.2 0 256 0zM112 160l0 64c0 17.7 14.3 32 32 32l96 0 0-128-96 0c-17.7 0-32 14.3-32 32zm160 96l96 0c17.7 0 32-14.3 32-32l0-64c0-17.7-14.3-32-32-32l-96 0 0 128zM112 384a32 32 0 1 0 0-64 32 32 0 1 0 0 64zm288 0a32 32 0 1 0 0-64 32 32 0 1 0 0 64zM352 80c0-8.8-7.2-16-16-16L176 64c-8.8 0-16 7.2-16 16s7.2 16 16 16l160 0c8.8 0 16-7.2 16-16z" />
         </symbol>
     </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="help-svg" viewBox="0 0 448 512">
+            <path fill="currentColor"
+                d="M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zM184 336l24 0 0-64-24 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l48 0c13.3 0 24 10.7 24 24l0 88 8 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-80 0c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
+        </symbol>
+    </svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="lunch-svg" viewBox="0 0 448 512">
+            <path fill="currentColor"
+                d="M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zM176 152l0 184 120 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-144 0c-13.3 0-24-10.7-24-24l0-208c0-13.3 10.7-24 24-24s24 10.7 24 24z" />
+        </symbol>
+    </svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="extended-svg" viewBox="0 0 512 512">
+            <path fill="currentColor"
+                d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9L0 168c0 13.3 10.7 24 24 24l110.1 0c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24l0 104c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65 0-94.1c0-13.3-10.7-24-24-24z" />
+        </symbol>
+    </svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="ae-class-svg" viewBox="0 0 500 500">
+            <path fill="currentColor"
+                d="M410,26H90c-35.3,0-64,28.7-64,64v320c0,35.3,28.7,64,64,64h320c35.3,0,64-28.7,64-64V90c0-35.3-28.7-64-64-64ZM251.84,344.4c-2.52,6.71-7.28,11.94-13.4,14.73-12.63,5.77-27.19-.79-32.45-14.61l-9.63-25.29h-62.82l-9.63,25.28c-2.55,6.7-7.33,11.91-13.46,14.67-3.05,1.37-6.24,2.06-9.44,2.06s-6.48-.7-9.56-2.11c-6.12-2.79-10.88-8.03-13.4-14.73-2.52-6.71-2.51-14.09.05-20.79l63.96-168.04c3.82-10.14,12.81-16.73,22.91-16.73s19.09,6.59,22.92,16.78l3.39,9,60.52,158.99c2.55,6.69,2.57,14.08.05,20.79ZM366.13,222.28c13.69,0,24.83,12.19,24.83,27.18s-11.14,27.18-24.83,27.18h-51.92v29.66h77.51c13.69,0,24.83,12.19,24.83,27.18s-11.14,27.18-24.83,27.18h-89.55c-20.75,0-37.62-18.48-37.62-41.19v-140.04c0-22.71,16.88-41.19,37.62-41.19h89.55c13.69,0,24.83,12.19,24.83,27.18s-11.14,27.18-24.83,27.18h-77.51v29.66h51.92ZM154.24,264.87h21.45l-10.72-28.18-10.73,28.18Z" />
+        </symbol>
+    </svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="ak-class-svg" viewBox="0 0 500 500">
+            <path fill="currentColor"
+                d="M155.06,264.7h21.24l-10.62-27.9-10.62,27.9ZM410,26H90c-35.3,0-64,28.7-64,64v320c0,35.3,28.7,64,64,64h320c35.3,0,64-28.7,64-64V90c0-35.3-28.7-64-64-64ZM251.71,343.46c-2.5,6.64-7.21,11.82-13.27,14.59-12.5,5.71-26.92-.78-32.14-14.47l-9.53-25.04h-62.21l-9.53,25.04c-2.53,6.64-7.26,11.79-13.33,14.53-3.02,1.36-6.18,2.04-9.35,2.04s-6.41-.7-9.46-2.09c-6.06-2.77-10.77-7.95-13.27-14.59-2.5-6.64-2.48-13.96.05-20.59l63.34-166.4c3.78-10.04,12.69-16.57,22.68-16.57s18.9,6.52,22.7,16.62l3.35,8.92,59.93,157.44c2.53,6.63,2.54,13.94.04,20.59ZM409.59,317.11c3.73,5.92,5.13,13.06,3.96,20.13-1.17,7.09-4.8,13.25-10.2,17.33-4.24,3.2-9.1,4.74-13.91,4.74-7.8,0-15.48-4.03-20.25-11.53l-44.41-70.18-12.15,13.71v41.08c0,14.84-11.03,26.92-24.59,26.92s-24.59-12.07-24.59-26.92v-166.41c0-14.84,11.03-26.92,24.59-26.92s24.59,12.07,24.59,26.92v48.03l59.13-66.73c4.57-5.16,10.7-8.07,17.26-8.18,6.55-.1,12.77,2.58,17.48,7.59,9.73,10.32,9.98,27.38.55,38.04h0s-47.37,53.46-47.37,53.46l49.92,78.94Z" />
+        </symbol>
+    </svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="pm-extended-svg" viewBox="0 0 512 512">
+            <path fill="currentColor"
+                d="M256,0C114.6,0,0,114.6,0,256s114.6,256,256,256c54.3,0,104.8-17,146.4-45.9,14.5-10.2,18.1-30.1,7.9-44.6-10.2-14.5-30.1-18-44.6-7.9-31.1,21.7-68.9,34.4-109.7,34.4-106,0-192-86-192-192,0-106,86-192,192-192,53,0,101,21.5,135.7,56.2l-30.8,30.8c-15.1,15.1-4.4,41,17,41h110.1c13.3,0,24-10.7,24-24V57.9c0-21.3-25.9-32-41-16.9l-34,34C390.7,28.7,326.7,0,256,0ZM256.1,128c-13.3,0-24,10.7-24,24v94.1s-65,65-65,65c-9.4,9.3-9.3,24.5,0,33.9s24.5,9.4,33.9,0l72-72c4.5-4.5,7-10.6,7-17v-104c0-13.3-10.7-24-24-24h.1Z" />
+        </symbol>
+    </svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="am-extended-svg" viewBox="0 0 512 512">
+            <path fill="currentColor"
+                d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9L0 168c0 13.3 10.7 24 24 24l110.1 0c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24l0 104c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65 0-94.1c0-13.3-10.7-24-24-24z" />
+        </symbol>
+    </svg>
+
+
+
+
+
+
+
 
 </head>
 
-<body>
-    <div class="xx-age-box-holder">
-        <div class="number-box age-00"><span>0</span></div>
-        <div class="number-box age-01"><span>1</span></div>
-        <div class="number-box age-02"><span>2</span></div>
-        <div class="number-box age-03"><span>3</span></div>
-        <div class="number-box age-04"><span>4</span></div>  
-        <div class="number-box age-05"><span>5</span></div>
-        <div class="number-box age-06"><span>6</span></div>
-        <div class="number-box age-07"><span>7</span></div>
-        <div class="number-box age-08"><span>8</span></div>
+<body class="attendance-body-wrapper a4-portrait border-class-pk">
+    <div class="attendance-header">
+        <img class="logo-img"
+            src="https://cdn.prod.website-files.com/5c02771190375e263a515ec5/65ac1052f76385678400c82c_joy-logo-short-blue.png"
+            alt="Joy Logo">
+        <div>Class Attendance</div>
+        <div class="property-of">
+            <svg class="property-of-icon">
+                <use href="#help-svg"></use>
+            </svg>
+            <div class="property-of-text">この書類はJoy to the Worldに帰属します。発見された場合はお電話ください。This document is the
+                property of Joy to the World. If found, please contact us. TEL: 03-5684-0247.</div>
+        </div>
     </div>
 
-    <div class="xx-age-box-holder">
-        <div class="number-box"><span>0</span></div>
-        <div class="number-box"><span>1</span></div>
-        <div class="number-box"><span>2</span></div>
-        <div class="number-box"><span>3</span></div>
-        <div class="number-box"><span>4</span></div>
+    <div class="class-date-header">
+        <div class="class-name pk-main">PK JT AIDLC</div>
+        <div class="day-date">Mon Mar 02 2025</div>
+        <div class="term-index-week">Day 1 of 5<br>Week 1 of 12<br>2024-2025 Summer W1</div>
+    </div>
+    <div class="teachers">
+        <div class="teacher-box">
+            <div class="status-box"></div>
+            <div class="teacher-box-info">
+                <div class="teacher-name">Kenji Szczepanski</div>
+                <div class="teacher-position">Head Teacher</div>
+            </div>
+        </div>
+        <div class="teacher-box">
+            <div class="status-box"></div>
+            <div class="teacher-box-info">
+                <div class="teacher-name">Kenji Szczepanski</div>
+                <div class="teacher-position">Assistant Teacher</div>
+            </div>
+        </div>
+        <div class="teacher-box">
+            <div class="status-box    "></div>
+            <div class="teacher-box-info">
+                <div class="teacher-name">Kenji Szczepanski</div>
+                <div class="teacher-position">Assistant Teacher</div>
+            </div>
+        </div>
+        <div class="teacher-box">
+
+            <div><svg class="svg-allergy-icon">
+                    <use href="#allergy-svg"></use>
+                </svg>Allergy</div>
+            <div><svg class="svg-medical-icon">
+                    <use href="#medical-svg"></use>
+                </svg>Medical</div>
+            <div><svg class="svg-lunch-icon">
+                    <use href="#lunch-svg"></use>
+                </svg>Lunch</div>
+            <div><svg class="ak-class-icon">
+                    <use href="#ak-class-svg"></use>
+
+                </svg>AK</div>
+            <div><svg class="svg-bus-icon-blue">
+                    <use href="#bus-svg"></use>
+                </svg><svg class="svg-bus-icon-yellow ">
+                    <use href="#bus-svg"></use>
+                </svg><svg class="svg-bus-icon-special">
+                    <use href="#bus-svg"></use>
+                </svg>Bus</div>
+            <div><svg class="am-extended-icon">
+                    <use href="#am-extended-svg"></use>
+                </svg><svg class="pm-extended-icon">
+                    <use href="#pm-extended-svg"></use>
+                </svg>Set Ext</div>
+
+        </div>
+
+    </div>
+    <div class="attendance-main-section">
+        <div class="attendance-grid">
+
+            <div class="legend-row">
+
+
+                <div class="legend-student">Name & Age</div>
+
+                <div class="legend-arrive">
+                    <div>Arrival</div>
+                    <div class="legend-depart-time">Time</div>
+                    <div class="legend-depart-contact">Contact Person</div>
+                </div>
+                <div class="legend-depart">
+                    <div>Depart</div>
+                    <div class="legend-depart-time">Time</div>
+                    <div class="legend-depart-contact">Contact Person</div>
+                </div>
+                <div class="park-box">Leave<br>Joy</div>
+                <div class="park-box">Arrive<br>Park</div>
+                <div class="park-box">Leave<br>Park</div>
+                <div class="park-box last">Arrive<br>Joy</div>
+
+
+
+
+
+
+
+            </div>
+            <div class="student-row">
+                <div class="number-box">8</div>
+                <div class="student-name-box">
+                    <div>Mina Yoshida</div>
+                    <div class="allergy-medical-icons">
+                        <svg class="svg-allergy-icon">
+                            <use href="#allergy-svg"></use>
+                        </svg>
+                        <svg class="svg-medical-icon">
+                            <use href="#medical-svg"></use>
+                        </svg>
+
+
+
+                    </div>
+                </div>
+                <div class="lunch"></div>
+
+                </svg>
+                <div class="number-box age-01">1</div>
+                <div class="bus-ext-box-arrive">
+                    <svg class="svg-bus-icon-blue">
+                        <use href="#bus-svg"></use>
+                    </svg>
+                    <svg class="am-extended-icon">
+                        <use href="#am-extended-svg"></use>
+                    </svg>
+
+
+                </div>
+
+                <div class="bus-ext-box-depart">
+                    <svg class="pm-extended-icon">
+                        <use href="#pm-extended-svg"></use>
+                    </svg>
+                    <svg class="ae-class-icon">
+                        <use href="#ae-class-svg"></use>
+                    </svg>
+                    <svg class="ak-class-icon">
+                        <use href="#ak-class-svg"></use>
+                    </svg>
+                </div>
+
+                <div class="student-row-space"></div>
+                <div class="student-row-space"></div>
+                <div class="student-row-space"></div>
+
+
+                <div class="student-row-space last"></div>
+            </div>
+
+            <div class="student-row">
+                <div class="number-box">1</div>
+                <div class="student-name-box">
+                    <div>Hiroshi Tanaka</div>
+                    <div class="allergy-medical-icons"> <svg class="svg-allergy-icon">
+                            <use href="#allergy-svg"></use>
+                        </svg></div>
+                </div>
+                <div class="lunch"> <svg class="svg-lunch-icon">
+                        <use href="#lunch-svg"></use>
+                    </svg></div>
+                <div class="number-box age-04">4</div>
+                <div class="bus-ext-box-arrive"></div>
+
+                <div class="bus-ext-box-depart">
+                </div>
+                <div class="student-row-space"></div>
+                <div class="student-row-space"></div>
+                <div class="student-row-space"></div>
+
+
+
+
+                <div class="student-row-space last"></div>
+            </div>
+
+            <div class="student-row">
+                <div class="number-box">2</div>
+                <div class="student-name-box">
+                    <div>Emiko Suzuki</div>
+                    <div class="allergy-medical-icons"> <svg class="svg-allergy-icon">
+                            <use href="#allergy-svg"></use>
+                        </svg></div>
+                </div>
+                <div class="lunch"></div>
+                <div class="number-box age-03">3</div>
+                <div class="bus-ext-box-arrive"></div>
+
+                <div class="bus-ext-box-depart">
+                </div>
+                <div class="student-row-space"></div>
+                <div class="student-row-space"></div>
+                <div class="student-row-space"></div>
+
+
+
+
+                <div class="student-row-space last"></div>
+            </div>
+
+            <div class="student-row">
+                <div class="number-box">3</div>
+                <div class="student-name-box">
+                    <div>Kaito Yamamoto</div>
+                    <div class="allergy-medical-icons"> <svg class="svg-allergy-icon">
+                            <use href="#allergy-svg"></use>
+                        </svg></div>
+                </div>
+                <div class="lunch"></div>
+                <div class="number-box age-06">6</div>
+                <div class="bus-ext-box-arrive"></div>
+
+                <div class="bus-ext-box-depart">
+                </div>
+                <div class="student-row-space"></div>
+                <div class="student-row-space"></div>
+                <div class="student-row-space"></div>
+
+
+
+
+                <div class="student-row-space last"></div>
+            </div>
+
+            <div class="student-row">
+                <div class="number-box">4</div>
+                <div class="student-name-box">
+                    <div>Ayumi Kobayashi</div>
+                    <div class="allergy-medical-icons"> <svg class="svg-allergy-icon">
+                            <use href="#allergy-svg"></use>
+                        </svg></div>
+                </div>
+                <div class="lunch"></div>
+                <div class="number-box age-02">2</div>
+                <div class="bus-ext-box-arrive"></div>
+
+                <div class="bus-ext-box-depart">
+                </div>
+                <div class="student-row-space"></div>
+                <div class="student-row-space"></div>
+                <div class="student-row-space"></div>
+
+
+
+
+                <div class="student-row-space last"></div>
+            </div>
+
+            <div class="student-row">
+                <div class="number-box">5</div>
+                <div class="student-name-box">
+                    <div>Rina Sato</div>
+                    <div class="allergy-medical-icons"> <svg class="svg-allergy-icon">
+                            <use href="#allergy-svg"></use>
+                        </svg></div>
+                </div>
+                <div class="lunch"></div>
+                <div class="number-box age-07">7</div>
+                <div class="bus-ext-box-arrive"></div>
+
+                <div class="bus-ext-box-depart">
+                </div>
+                <div class="student-row-space"></div>
+                <div class="student-row-space"></div>
+                <div class="student-row-space"></div>
+
+
+
+
+                <div class="student-row-space last"></div>
+            </div>
+
+            <div class="student-row">
+                <div class="number-box">6</div>
+                <div class="student-name-box">
+                    <div>Satoshi Tanaka</div>
+                    <div class="allergy-medical-icons"> <svg class="svg-allergy-icon">
+                            <use href="#allergy-svg"></use>
+                        </svg></div>
+                </div>
+                <div class="lunch"></div>
+                <div class="number-box age-05">5</div>
+                <div class="bus-ext-box-arrive"></div>
+
+                <div class="bus-ext-box-depart">
+                </div>
+                <div class="student-row-space"></div>
+                <div class="student-row-space"></div>
+                <div class="student-row-space"></div>
+
+
+
+
+                <div class="student-row-space last"></div>
+            </div>
+
+            <div class="student-row">
+                <div class="number-box">7</div>
+                <div class="student-name-box">
+                    <div>Yuki Nakashima</div>
+                    <div class="allergy-medical-icons"> <svg class="svg-allergy-icon">
+                            <use href="#allergy-svg"></use>
+                        </svg></div>
+                </div>
+                <div class="lunch"></div>
+                <div class="number-box age-08">8</div>
+                <div class="bus-ext-box-arrive"></div>
+
+                <div class="bus-ext-box-depart">
+                </div>
+                <div class="student-row-space"></div>
+                <div class="student-row-space"></div>
+                <div class="student-row-space"></div>
+
+
+
+
+                <div class="student-row-space last"></div>
+            </div>
+
+            <div class="student-row">
+                <div class="number-box">9</div>
+                <div class="student-name-box">
+                    <div>Renji Suzuki</div>
+                    <div class="allergy-medical-icons"> <svg class="svg-allergy-icon">
+                            <use href="#allergy-svg"></use>
+                        </svg></div>
+                </div>
+                <div class="lunch"></div>
+                <div class="number-box age-03">3</div>
+                <div class="bus-ext-box-arrive"></div>
+
+                <div class="bus-ext-box-depart">
+                </div>
+                <div class="student-row-space"></div>
+                <div class="student-row-space"></div>
+                <div class="student-row-space"></div>
+
+
+
+
+                <div class="student-row-space last"></div>
+            </div>
+
+            <div class="student-row">
+                <div class="number-box">10</div>
+                <div class="student-name-box">
+                    <div>Saya Mori</div>
+                    <div class="allergy-medical-icons"> <svg class="svg-allergy-icon">
+                            <use href="#allergy-svg"></use>
+                        </svg></div>
+                </div>
+                <div class="lunch"></div>
+                <div class="number-box age-06">6</div>
+                <div class="bus-ext-box-arrive"></div>
+
+                <div class="bus-ext-box-depart">
+                </div>
+                <div class="student-row-space"></div>
+                <div class="student-row-space"></div>
+                <div class="student-row-space"></div>
+
+
+
+
+                <div class="student-row-space last"></div>
+            </div>
+            <div class="student-row">
+                <div class="number-box">10</div>
+                <div class="student-name-box">
+                    <div>Saya Mori</div>
+                    <div class="allergy-medical-icons"> <svg class="svg-allergy-icon">
+                            <use href="#allergy-svg"></use>
+                        </svg></div>
+                </div>
+                <div class="lunch"></div>
+                <div class="number-box age-06">6</div>
+                <div class="bus-ext-box-arrive"></div>
+
+                <div class="bus-ext-box-depart">
+                </div>
+                <div class="student-row-space"></div>
+                <div class="student-row-space"></div>
+                <div class="student-row-space"></div>
+
+
+
+
+                <div class="student-row-space last"></div>
+            </div>
+
+            <div class="student-row">
+                <div class="number-box">8</div>
+                <div class="student-name-box">
+                    <div>Mina Yoshida</div>
+                    <div class="allergy-medical-icons"> <svg class="svg-allergy-icon">
+                            <use href="#allergy-svg"></use>
+                        </svg></div>
+                </div>
+                <div class="lunch"></div>
+                <div class="number-box age-01">1</div>
+                <div class="bus-ext-box-arrive"></div>
+
+                <div class="bus-ext-box-depart">
+                </div>
+                <div class="student-row-space"></div>
+                <div class="student-row-space"></div>
+                <div class="student-row-space"></div>
+
+
+
+
+                <div class="student-row-space last"></div>
+            </div>
+
+            <div class="student-row">
+                <div class="number-box">1</div>
+                <div class="student-name-box">
+                    <div>Hiroshi Tanaka</div>
+                    <div class="allergy-medical-icons"> <svg class="svg-allergy-icon">
+                            <use href="#allergy-svg"></use>
+                        </svg></div>
+                </div>
+                <div class="lunch"></div>
+                <div class="number-box age-04">4</div>
+                <div class="bus-ext-box-arrive"></div>
+
+                <div class="bus-ext-box-depart">
+                </div>
+                <div class="student-row-space"></div>
+                <div class="student-row-space"></div>
+                <div class="student-row-space"></div>
+
+
+
+
+                <div class="student-row-space last"></div>
+            </div>
+
+            <div class="student-row">
+                <div class="number-box">2</div>
+                <div class="student-name-box">
+                    <div>Emiko Suzuki</div>
+                    <div class="allergy-medical-icons"> <svg class="svg-allergy-icon">
+                            <use href="#allergy-svg"></use>
+                        </svg></div>
+                </div>
+                <div class="lunch"></div>
+                <div class="number-box age-03">3</div>
+                <div class="bus-ext-box-arrive"></div>
+
+                <div class="bus-ext-box-depart">
+                </div>
+                <div class="student-row-space"></div>
+                <div class="student-row-space"></div>
+                <div class="student-row-space"></div>
+
+
+
+
+                <div class="student-row-space last"></div>
+            </div>
+
+            <div class="student-row">
+                <div class="number-box">3</div>
+                <div class="student-name-box">
+                    <div>Kaito Yamamoto</div>
+                    <div class="allergy-medical-icons"> <svg class="svg-allergy-icon">
+                            <use href="#allergy-svg"></use>
+                        </svg></div>
+                </div>
+                <div class="lunch"></div>
+                <div class="number-box age-06">6</div>
+                <div class="bus-ext-box-arrive"></div>
+
+                <div class="bus-ext-box-depart">
+                </div>
+                <div class="student-row-space"></div>
+                <div class="student-row-space"></div>
+                <div class="student-row-space"></div>
+
+
+
+
+                <div class="student-row-space last"></div>
+            </div>
+
+            <div class="student-row">
+                <div class="number-box">4</div>
+                <div class="student-name-box">
+                    <div>Ayumi Kobayashi</div>
+                    <div class="allergy-medical-icons"> <svg class="svg-allergy-icon">
+                            <use href="#allergy-svg"></use>
+                        </svg></div>
+                </div>
+                <div class="lunch"></div>
+                <div class="number-box age-02">2</div>
+                <div class="bus-ext-box-arrive"></div>
+
+                <div class="bus-ext-box-depart">
+                </div>
+                <div class="student-row-space"></div>
+                <div class="student-row-space"></div>
+                <div class="student-row-space"></div>
+
+
+
+
+                <div class="student-row-space last"></div>
+            </div>
+
+            <div class="student-row">
+                <div class="number-box">5</div>
+                <div class="student-name-box">
+                    <div>Rina Sato</div>
+                    <div class="allergy-medical-icons"> <svg class="svg-allergy-icon">
+                            <use href="#allergy-svg"></use>
+                        </svg></div>
+                </div>
+                <div class="lunch"></div>
+                <div class="number-box age-07">7</div>
+                <div class="bus-ext-box-arrive"></div>
+
+                <div class="bus-ext-box-depart">
+                </div>
+                <div class="student-row-space"></div>
+                <div class="student-row-space"></div>
+                <div class="student-row-space"></div>
+
+
+
+
+                <div class="student-row-space last"></div>
+            </div>
+
+            <div class="student-row">
+                <div class="number-box">6</div>
+                <div class="student-name-box">
+                    <div>Satoshi Tanaka</div>
+                    <div class="allergy-medical-icons"> <svg class="svg-allergy-icon">
+                            <use href="#allergy-svg"></use>
+                        </svg></div>
+                </div>
+                <div class="lunch"></div>
+                <div class="number-box age-05">5</div>
+                <div class="bus-ext-box-arrive"></div>
+
+                <div class="bus-ext-box-depart">
+                </div>
+                <div class="student-row-space"></div>
+                <div class="student-row-space"></div>
+                <div class="student-row-space"></div>
+
+
+
+
+                <div class="student-row-space last"></div>
+            </div>
+
+            <div class="student-row">
+                <div class="number-box">7</div>
+                <div class="student-name-box">
+                    <div>Yuki Nakashima</div>
+                    <div class="allergy-medical-icons"> <svg class="svg-allergy-icon">
+                            <use href="#allergy-svg"></use>
+                        </svg></div>
+                </div>
+                <div class="lunch"></div>
+                <div class="number-box age-08">8</div>
+                <div class="bus-ext-box-arrive"></div>
+
+                <div class="bus-ext-box-depart">
+                </div>
+                <div class="student-row-space"></div>
+                <div class="student-row-space"></div>
+                <div class="student-row-space"></div>
+
+
+
+
+                <div class="student-row-space last"></div>
+            </div>
+
+            <div class="student-row">
+                <div class="number-box">9</div>
+                <div class="student-name-box">
+                    <div>Renji Suzuki</div>
+                    <div class="allergy-medical-icons"> <svg class="svg-allergy-icon">
+                            <use href="#allergy-svg"></use>
+                        </svg></div>
+                </div>
+                <div class="lunch"></div>
+                <div class="number-box age-03">3</div>
+                <div class="bus-ext-box-arrive"></div>
+
+                <div class="bus-ext-box-depart">
+                </div>
+                <div class="student-row-space"></div>
+                <div class="student-row-space"></div>
+                <div class="student-row-space"></div>
+
+
+
+
+                <div class="student-row-space last"></div>
+            </div>
+
+
+
+
+
+        </div>
+
+        <div class="notes-box">
+            <div class="student-count-wrapper">
+                <div>Present:</div>
+                <div>Absent:</div>
+                <div class="age-03">3:</div>
+                <div class="age-04">4:</div>
+                <div class="age-05">5:</div>
+
+            </div>
+            <div class="park-wrapper">
+                <div class="park-location-box">
+                    <div>Takehaya</div>
+                    <div>Other:</div>
+                    <div>Harimazaka</div>
+
+                </div>
+                <div class="weather-box">
+                    <div class="weather-icon-sunny">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512"><!--!Font Awesome Pro 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2025 Fonticons, Inc.-->
+                            <path fill="currentColor"
+                                d="M0 355.4c0 2.1 .4 4.2 1.2 6.1c2.1 5 6.6 8.6 11.9 9.6L121 391l19.8 107.9c1 5.3 4.6 9.8 9.6 11.9s10.7 1.5 15.2-1.6L256 446.9l90.3 62.3c4.5 3.1 10.2 3.7 15.2 1.6s8.6-6.6 9.6-11.9L391 391l107.9-19.8c5.3-1 9.8-4.6 11.9-9.6s1.5-10.7-1.6-15.2L446.9 256l62.3-90.3c3.1-4.5 3.7-10.2 1.6-15.2s-6.6-8.6-11.9-9.6L391 121 371.1 13.1c-1-5.3-4.6-9.8-9.6-11.9c-2-.8-4-1.2-6.1-1.2c-3.2 0-6.4 1-9.1 2.8L256 65.1 165.7 2.8c-4.5-3.1-10.2-3.7-15.2-1.6s-8.6 6.6-9.6 11.9L121 121 13.1 140.9c-5.3 1-9.8 4.6-11.9 9.6s-1.5 10.7 1.6 15.2L65.1 256 2.8 346.3C1 349 0 352.2 0 355.4zM384 256a128 128 0 1 1 -256 0 128 128 0 1 1 256 0z" />
+                            <path fill="currentColor" opacity=".4" d="M256 160a96 96 0 1 0 0 192 96 96 0 1 0 0-192z" />
+                        </svg>
+                    </div>
+                    <div class="weather-icon-partly-cloudy">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 640 512"><!--!Font Awesome Pro 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2025 Fonticons, Inc.-->
+                            <path fill="currentColor"
+                                d="M1.2 121.8c-2.1 5.1-1.5 10.9 1.6 15.4L52.5 208 2.9 278.8c-3.2 4.5-3.8 10.3-1.6 15.4s6.7 8.7 12.1 9.6l84.7 14.1 14.1 84.7c.9 5.4 4.5 10 9.6 12.1s10.9 1.5 15.4-1.6l24.4-17c6.5-41.8 33.2-76.8 69.8-94.9c-7.5 1.9-15.3 2.9-23.4 2.9c-53 0-96-43-96-96s43-96 96-96s96 43 96 96c0 .4 0 .7 0 1.1c18.8-10.9 40.7-17.1 64-17.1c2.2 0 4.5 .1 6.7 .2l38.5-55c1.9-2.7 2.9-5.9 2.9-9.2c0-2.1-.4-4.2-1.2-6.2c-2.1-5.1-6.7-8.7-12.1-9.6L317.9 98.1 303.8 13.4c-.9-5.4-4.5-10-9.6-12.1s-10.9-1.5-15.4 1.6L208 52.5 137.2 2.9c-4.5-3.2-10.3-3.8-15.4-1.6s-8.7 6.7-9.6 12.1L98.1 98.1 13.4 112.2c-5.4 .9-10 4.5-12.1 9.6zM144 208a64 64 0 1 0 128 0 64 64 0 1 0 -128 0z" />
+                            <path fill="var(--grey-300)"
+                                d="M559.9 511.9c44.2 0 80-35.8 80-80c0-39.3-28.4-72.1-65.8-78.7c1.2-5.6 1.9-11.3 1.9-17.2c0-44.2-35.8-80-80-80c-17 0-32.8 5.3-45.8 14.4C433.3 242.6 402.8 224 368 224c-53 0-96 43-96 96l0 1.3c-45.4 7.6-80 47.1-80 94.6c0 53 43 96 96 96l271.9 0z" />
+                        </svg>
+                    </div>
+                    <div class="weather-icon-cloudy">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 640 512"><!--!Font Awesome Pro 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2025 Fonticons, Inc.-->
+                            <path fill="currentColor" opacity=".4"
+                                d="M0 192c0 53 43 96 96 96l64.9 0c8-72 69-128 143.1-128c41.7 0 79.3 17.7 105.6 46.1c9.9-5.5 20.7-9.6 32.1-11.9c4.1-10.6 6.3-22.2 6.3-34.2c0-53-43-96-96-96c-14 0-27.2 3-39.2 8.4C296.8 30.1 255.9 0 208 0C151.6 0 104.9 41.7 97.1 96L96 96C43 96 0 139 0 192z" />
+                            <path fill="currentColor"
+                                d="M128 416c0 53 43 96 96 96l320 0c53 0 96-43 96-96s-43-96-96-96c-.5 0-1.1 0-1.6 0c1.1-5.2 1.6-10.5 1.6-16c0-44.2-35.8-80-80-80c-24.3 0-46.1 10.9-60.8 28c-18.7-35.7-56.1-60-99.2-60c-61.9 0-112 50.1-112 112c0 7.1 .7 14.1 1.9 20.8C155.6 337.4 128 373.5 128 416z" />
+                        </svg>
+                    </div>
+                    <div class="weather-icon-rainy">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512"><!--!Font Awesome Pro 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2025 Fonticons, Inc.-->
+                            <path fill="currentColor" opacity=".5"
+                                d="M1.9 478.5c-5.2 12.2 .4 26.3 12.6 31.5s26.3-.4 31.5-12.6l48-112c5.2-12.2-.4-26.3-12.6-31.5c-3.1-1.3-6.3-1.9-9.4-1.9c-9.3 0-18.2 5.5-22.1 14.6l-48 112zm120 0c-5.2 12.2 .4 26.3 12.6 31.5s26.3-.4 31.5-12.6l48-112c5.2-12.2-.4-26.3-12.6-31.5c-3.1-1.3-6.3-1.9-9.4-1.9c-9.3 0-18.2 5.5-22.1 14.6l-48 112zm112 0c-5.2 12.2 .4 26.3 12.6 31.5s26.3-.4 31.5-12.6l48-112c5.2-12.2-.4-26.3-12.6-31.5c-3.1-1.3-6.3-1.9-9.4-1.9c-9.3 0-18.2 5.5-22.1 14.6l-48 112zm120 0c-5.2 12.2 .4 26.3 12.6 31.5s26.3-.4 31.5-12.6l48-112c1.3-3.1 1.9-6.3 1.9-9.4c0-9.3-5.5-18.2-14.6-22.1c-3.1-1.3-6.3-1.9-9.4-1.9c-9.3 0-18.2 5.5-22.1 14.6l-48 112z" />
+                            <path fill="var(--grey-500)"
+                                d="M0 224c0 53 43 96 96 96l320 0c53 0 96-43 96-96s-43-96-96-96c-.5 0-1.1 0-1.6 0c1.1-5.2 1.6-10.5 1.6-16c0-44.2-35.8-80-80-80c-24.3 0-46.1 10.9-60.8 28C256.5 24.3 219.1 0 176 0C114.1 0 64 50.1 64 112c0 7.1 .7 14.1 1.9 20.8C27.6 145.4 0 181.5 0 224z" />
+                        </svg>
+                    </div>
+
+                </div>
+                <div class="temperature-box">
+                    <div class="weather-icon-temperature"><svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 320 512"><!--!Font Awesome Pro 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2025 Fonticons, Inc.-->
+                            <path fill="currentColor" opacity=".4"
+                                d="M16 368c0 79.5 64.5 144 144 144s144-64.5 144-144c0-33.2-11.2-63.8-30.1-88.1c-.9-1.2-1.5-2.2-1.7-2.8c-.1-.3-.2-.5-.2-.6L272 112C272 50.2 221.9 0 160 0S48 50.2 48 112l0 164.4c0 .1-.1 .3-.2 .6c-.2 .6-.8 1.6-1.7 2.8C27.2 304.2 16 334.8 16 368zm64 0c0-18.5 6.2-35.4 16.7-48.9c8.2-10.6 15.3-25.2 15.3-42.5L112 112c0-26.5 21.5-48 48-48s48 21.5 48 48l0 164.5c0 17.3 7.1 31.9 15.3 42.5C233.8 332.6 240 349.5 240 368c0 44.2-35.8 80-80 80s-80-35.8-80-80z" />
+                            <path fill="currentColor"
+                                d="M176 176c0-8.8-7.2-16-16-16s-16 7.2-16 16l0 146.7c-18.6 6.6-32 24.4-32 45.3c0 26.5 21.5 48 48 48s48-21.5 48-48c0-20.9-13.4-38.7-32-45.3L176 176z" />
+                        </svg></div><div>°C</div>
+                </div>
+                <div class="paired-with-box">
+                    <div>PK</div>
+                    <div>K1</div>
+                    <div>K2</div>
+                    <div>K3</div>
+                </div>
+
+
+
+
+            
+           
+
+        </div>
+        <div class="note-space">Notes:</div>
+
+
+
+        <div class="barcode-section">
+            <div class="barcode-text">
+                Please use the QR code to upload an image or scan of this form. Please "X" over the QR code when done.
+            </div>
+            <div class="barcode-wrapper">
+              
+            </div>
+        </div>
+
     </div>
 
-    <div class="student-name-box">
-        <div>Kenji Szczepanski</div><svg class="svg-allergy-icon">
-            <use href="#red-house-svg"></use>
-        </svg>
-    </div>
-
-    <div class="phone-number">090-9822-0328</div>
 
 
-    <div class="bus_ext_box">
-        <svg class="blue-bus-icon">
-            <use href="#bus-icon"></use>
-        </svg><div class="bus-ext-time">7:15 AM</div>
-    </div>
-    <div class="bus_ext_box">
-        <svg class="yellow-bus-icon">
-            <use href="#bus-icon"></use>
-        </svg><div class="bus-ext-time">7:15 AM</div>
 
+    <div class="attendance-footer">
+        Joy to the World American International School - 〒112-0002東京都文京区小石川5-11-17 2F - 03-5684-0247 -
+        joytotheworld.info
     </div>
-    <div class="bus_ext_box">
-        <svg class="special-bus-icon">
-            <use href="#bus-icon"></use>
-        </svg><div class="bus-ext-time">7:15 AM</div>
-    </div>
+
 
 </body>
 
