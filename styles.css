@@ -270,7 +270,6 @@ body {
 
 .trip {
     border-block-start: 1px solid black;
-    font-family: var(--mono-font);
     font-variation-settings: "wdth" 80;
     ##trip_font_size##
 }
