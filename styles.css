@@ -1,3 +1,13 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures the box-sizing is consistent across elements */
+}
+
+
+
 body {
     font-size: 12px;
     margin: 0;
@@ -210,7 +220,8 @@ body {
 }
 
 .barcode {
-    padding: 3px;
+    box-sizing: content-box;
+    padding: 4mm;
     background-color: white;
     border-inline-start: 1px solid black;
     grid-column: 2;
@@ -220,6 +231,7 @@ body {
 }
 
 .barcode img {
+    box-sizing: content-box;
     width: 20mm;
     height: auto;
 }
