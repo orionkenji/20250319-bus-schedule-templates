@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2024-2025-3T-Blue-Bus-2025-04-01-Tue-AM.pdf</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inconsolata:wdth,wght@50..200,200..900&family=Noto+Sans+JP:wght@100..900&display=swap"
+        rel="stylesheet">
+        <style>
+            *,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures the box-sizing is consistent across elements */
+}
+
+
+
+body {
+    font-size: 12px;
+    margin: 0;
+    padding: 3mm;
+    position: relative;
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.1;
+    width: 210mm;
+    height: 297mm;
+}
+
+:root {
+    --light-grey: #f0f0f0;
+    --dark-grey: #d9d9d9;
+    --mono-font: "Inconsolata", monospace;
+    --bus-color: #60a5fa;
+    --bus-color-light: #dbeafe;
+}
+
+.sidebar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45mm;
+    height: 100%;
+    z-index: -1;
+    background-color: var(--bus-color);
+    text-align: end;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    height: 100%;
+}
+
+.top-section,
+.mid-section,
+.end-section {
+    margin: 0;
+    padding: 0;
+}
+
+.mid-section {
+    border: 1px solid black;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto;
+}
+
+.top-row01,
+.end-row01 {
+    display: flex;
+    gap: 3mm;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.top-row02 {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    /* Ensures Div 2 is centered */
+    align-items: center;
+    /* Align items vertically */
+    gap: 3mm;
+    padding-block-end: 3px;
+    font-family: var(--mono-font);
+    font-size: 2.5rem;
+}
+
+
+
+.top-row02>div:nth-child(2) {
+    text-align: center;
+    /* Center the text inside */
+}
+
+.top-row02>div:nth-child(3) {
+
+    font-size: .85rem;
+    text-align: right;
+    font-variation-settings: "wdth" 80;
+}
+
+
+
+
+.top-row01 {
+    padding-block: 3px;
+    font-size: 1rem
+}
+
+.AM,
+.flex-pick-up {
+    color: #84cc16;
+}
+
+.PM {
+    color: #ef4444
+}
+
+.top-row01 img {
+    height: 8mm;
+    padding: 0;
+}
+
+
+
+
+.mid-row01,
+.mid-row02,
+.mid-row03,
+.mid-row04 {
+    display: flex;
+    gap: 3px;
+    align-items: stretch;
+    height: 100%;
+}
+
+.qr-code-outer-section {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: stretch;
+
+}
+
+
+
+.mid-row01,
+.mid-row02,
+.mid-row03 {
+    border-bottom: 1px solid black;
+}
+
+.mid-row-main-content {
+
+    border-block-end: 1px solid black;
+    display: grid;
+    grid-template-columns:
+        max-content auto max-content 1fr 1fr .4fr;
+
+    align-content: start;
+}
+
+.mid-row-main-content>div:last-child {
+    border-block-end: 1px solid black;
+}
+
+
+
+
+
+.end-row01 {
+    justify-content: center;
+
+
+}
+
+.instruction-number {
+    font-size: 2em;
+    padding-inline: 3px;
+    font-family: var(--mono-font);
+    align-self: center;
+}
+
+.instruction-text {
+    padding: 3px;
+    align-self: center;
+    font-size: 10px;
+
+}
+
+.signatures {
+    display: flex;
+    flex: 1;
+    gap: 6px;
+    background-color: var(--light-grey);
+    padding: 3px;
+    align-items: center;
+}
+
+.cell {
+    background-color: white;
+    flex: 1;
+    text-align: center;
+    align-self: stretch;
+    min-height: 10mm;
+    font-size: .85em;
+}
+
+
+.mid-row03 {
+    grid-column: 1;
+    /* First column */
+    grid-row: 1;
+    /* First row */
+}
+
+.mid-row04 {
+    grid-column: 1;
+    /* First column */
+    grid-row: 2;
+    /* Second row */
+}
+
+.barcode {
+    box-sizing: content-box;
+    padding: 4mm;
+    background-color: white;
+    border-inline-start: 1px solid black;
+    grid-column: 2;
+    /* Second column */
+    grid-row: 1 / span 2;
+    /* Start at row 1, span 2 rows */
+}
+
+.barcode img {
+    box-sizing: content-box;
+    width: 20mm;
+    height: auto;
+}
+
+.property-of {
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    align-self: stretch;
+    background-color: white;
+    border: 1px solid black;
+    padding: 3px;
+    font-size: .6rem;
+
+}
+
+.warning-icon {
+    flex-basis: 8mm;
+    aspect-ratio: 1 / 1;
+    align-self: stretch;
+}
+
+.column-headings {
+    text-align: center;
+    font-size: .5rem;
+}
+
+.column-headings01 {
+    text-align: center;
+    grid-column: span 3;
+}
+
+.trip,
+.trip-title,
+.student-row,
+.headings-outer {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-column: span 6;
+    border-block-start: 1px solid black;
+    font-variation-settings: "wdth" 80;
+    
+    line-height: 1.6;
+}
+
+.trip,
+.trip-title,
+.student-row {
+  
+    font-size: 1rem; 
+ 
+}
+
+.headings-outer>div:nth-child(-n+3) {
+    border-inline-end: 1px solid black;
+}
+
+.headings-outer>div {
+    padding: 6px;
+}
+
+.trip {
+    
+}
+
+
+
+
+
+.trip-title {
+    grid-column: span 6;
+    background-color: var(--bus-color-light);
+
+}
+
+
+.flex-pick-up {
+    width: 3mm;
+    height: 3mm;
+    position: absolute;
+    display: flex;
+    right: 0;
+
+
+
+}
+
+.name-box:has(.flex-pick-up)>div:first-child {
+    padding-inline-end: 6px;
+}
+
+
+
+.student-row>div,
+.trip-title>div {
+
+
+    padding-inline: 3mm;
+}
+
+
+.student-row>div:nth-child(n+3):nth-child(-n+5) {
+
+    border-inline-end: 1px solid black;
+}
+
+.trip>div:not(:first-child) {
+    border-block-start: 1px solid black;
+}
+
+.depart {
+    grid-column: span 5;
+}
+
+.name-box {
+    display: grid;
+    grid-template-columns: 1fr auto;
+
+    align-items: center;
+    position: relative;
+}
+        </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="top-section">
+            <div class="top-row01">
+                <div> <img
+                        src="https://cdn.prod.website-files.com/5c02771190375e263a515ec5/65ac1052f76385678400c82c_joy-logo-short-blue.png"
+                        alt="Joy Logo"> </div>
+                <div>Bus Attendance</div>
+                <div class="property-of">
+                    <div class="warning-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="100%" width="100%">
+                            <path
+                                d="M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zm160 96c13.3 0 24 10.7 24 24l0 112c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-112c0-13.3 10.7-24 24-24zM192 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"
+                                fill="#e93337" />
+                        </svg>
+                    </div>
+                    <div>個人情報の取扱いについて: この書類はJoy to the Worldに帰属します。万一発見された場合は、03-5684-0247までご連絡ください。 This form is the
+                        property of Joy to the World. If found, please contact us at 03-5684-0247.
+                    </div>
+                </div>
+            </div>
+            <div class="top-row02">
+                <div class="AM">AM</div>
+                <div>Tue, Apr 1, 2025</div>
+                <div>Blue Bus<br>2024-2025 Term 3<br>Week 31</div>
+            </div>
+        </div>
+        <div class="mid-section">
+            <div class="mid-row01">
+                <div class="instruction-number">1</div>
+                <div class="signatures">
+                    <div>The Bus is ready for operation.<br>バスの運行準備が整いました。</div>
+                    <div class="cell">TIME</div>
+                    <div class="cell">MONITOR</div>
+                    <div class="cell">DRIVER</div>
+                </div>
+            </div>
+            <div class="mid-row02">
+                <div class="instruction-number">2</div>
+                <div class="instruction-text">Please fill out this form carefully each time students board or leave the
+                    bus. When there are no students onboard, review your entries for accuracy. This log is for the
+                    safety of the students and may be reviewed by government authorities, so please ensure all
+                    information is correct. </div>
+            </div>
+            <div class="mid-row-main-content">
+                <div class="headings-outer">
+                    <div class="column-headings01">Time, Student, and Phone Number</div>
+                    <div class="column-headings">Contact 1 - Time/Person</div>
+                    <div class="column-headings">Contact 2 - Time/Person</div>
+                    <div class="column-headings">Monitor</div>
+                </div>
+                 <div class="student-row"><div>7:30 AM</div><div class="name-box"><div></div></div><div></div><div></div><div></div><div></div></div> <div class="student-row"><div>7:45 AM</div><div class="name-box"><div>Takuto Cho</div><div class="flex-pick-up"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%"><path fill="currentColor" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM184 128l92 0c50.8 0 92 41.2 92 92s-41.2 92-92 92l-68 0 0 48 0 24-48 0 0-24 0-72 0-136 0-24 24 0zm92 136c24.3 0 44-19.7 44-44s-19.7-44-44-44l-68 0 0 88 68 0z" /></svg></div></div><div>090-7812-7000</div><div></div><div></div><div></div></div> <div class="student-row"><div>7:50 AM</div><div class="name-box"><div>Annie Li</div><div class="flex-pick-up"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%"><path fill="currentColor" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM184 128l92 0c50.8 0 92 41.2 92 92s-41.2 92-92 92l-68 0 0 48 0 24-48 0 0-24 0-72 0-136 0-24 24 0zm92 136c24.3 0 44-19.7 44-44s-19.7-44-44-44l-68 0 0 88 68 0z" /></svg></div></div><div>090-1306-0832</div><div></div><div></div><div></div></div> <div class="student-row"><div>8:10 AM</div><div class="name-box"><div></div></div><div></div><div></div><div></div><div></div></div> <div class="student-row"><div>8:20 AM</div><div class="name-box"><div>Taiga Kobayashi</div><div class="flex-pick-up"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%"><path fill="currentColor" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM184 128l92 0c50.8 0 92 41.2 92 92s-41.2 92-92 92l-68 0 0 48 0 24-48 0 0-24 0-72 0-136 0-24 24 0zm92 136c24.3 0 44-19.7 44-44s-19.7-44-44-44l-68 0 0 88 68 0z" /></svg></div></div><div>080-4180-6710</div><div></div><div></div><div></div></div> <div class="student-row"><div>8:20 AM</div><div class="name-box"><div>Sora Kobayashi</div><div class="flex-pick-up"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%"><path fill="currentColor" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM184 128l92 0c50.8 0 92 41.2 92 92s-41.2 92-92 92l-68 0 0 48 0 24-48 0 0-24 0-72 0-136 0-24 24 0zm92 136c24.3 0 44-19.7 44-44s-19.7-44-44-44l-68 0 0 88 68 0z" /></svg></div></div><div>080-4180-6710</div><div></div><div></div><div></div></div> <div class="student-row"><div>8:25 AM</div><div class="name-box"><div>Taiga Takagi</div><div class="flex-pick-up"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%"><path fill="currentColor" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM184 128l92 0c50.8 0 92 41.2 92 92s-41.2 92-92 92l-68 0 0 48 0 24-48 0 0-24 0-72 0-136 0-24 24 0zm92 136c24.3 0 44-19.7 44-44s-19.7-44-44-44l-68 0 0 88 68 0z" /></svg></div></div><div>080-2552-8130</div><div></div><div></div><div></div></div> <div class="student-row"><div>8:30 AM</div><div class="name-box"><div>Kaito Takaya</div><div class="flex-pick-up"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%"><path fill="currentColor" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM184 128l92 0c50.8 0 92 41.2 92 92s-41.2 92-92 92l-68 0 0 48 0 24-48 0 0-24 0-72 0-136 0-24 24 0zm92 136c24.3 0 44-19.7 44-44s-19.7-44-44-44l-68 0 0 88 68 0z" /></svg></div></div><div>090-5219-2439</div><div></div><div></div><div></div></div> <div class="student-row"><div>8:35 AM</div><div class="name-box"><div></div></div><div></div><div></div><div></div><div></div></div> <div class="student-row"><div>9:10 AM</div><div class="name-box"><div>Sherlyn Chao</div><div class="flex-pick-up"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%"><path fill="currentColor" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM184 128l92 0c50.8 0 92 41.2 92 92s-41.2 92-92 92l-68 0 0 48 0 24-48 0 0-24 0-72 0-136 0-24 24 0zm92 136c24.3 0 44-19.7 44-44s-19.7-44-44-44l-68 0 0 88 68 0z" /></svg></div></div><div>090-1794-1888</div><div></div><div></div><div></div></div> <div class="student-row"><div>9:30 AM</div><div class="name-box"><div>Rei Sato</div><div class="flex-pick-up"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%"><path fill="currentColor" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM184 128l92 0c50.8 0 92 41.2 92 92s-41.2 92-92 92l-68 0 0 48 0 24-48 0 0-24 0-72 0-136 0-24 24 0zm92 136c24.3 0 44-19.7 44-44s-19.7-44-44-44l-68 0 0 88 68 0z" /></svg></div></div><div>080-4352-1539</div><div></div><div></div><div></div></div> <div class="student-row"><div>9:30 AM</div><div class="name-box"><div>Arata Sato</div><div class="flex-pick-up"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%"><path fill="currentColor" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM184 128l92 0c50.8 0 92 41.2 92 92s-41.2 92-92 92l-68 0 0 48 0 24-48 0 0-24 0-72 0-136 0-24 24 0zm92 136c24.3 0 44-19.7 44-44s-19.7-44-44-44l-68 0 0 88 68 0z" /></svg></div></div><div>080-4352-1539</div><div></div><div></div><div></div></div>
+
+
+
+
+            </div>
+            <div class="qr-code-outer-section">
+                <div class="barcode"><img src="http://api.qrserver.com/v1/create-qr-code/?data=https%3A%2F%2Fforms.good-schools.jp%2Fjoy-attendance-returns%3Fid%3DrecrvXKzLrEk8kDRn&size=300x300&format=svg" alt="Barcode"></div>
+                <div class="mid-row03">
+                    <div class="instruction-number">3</div>
+                    <div class="signatures">
+                        <div>No students remain on the bus.<br>バス内に生徒がいません。</div>
+                        <div class="cell">TIME</div>
+                        <div class="cell">MONITOR</div>
+                        <div class="cell">DRIVER</div>
+                    </div>
+                </div>
+                <div class="mid-row04">
+                    <div class="instruction-number">4</div>
+                    <div class="instruction-text">After the final signatures, take a picture of this sheet and use the
+                        QR code to upload the image. Please "X" over the QR code when done. This can be done at the end
+                        of the shift or at the beginning of the next, whenever is easiest. </div>
+                </div>
+            </div>
+        </div>
+        <div class="end-section">
+            <div class="end-row01">
+                <div>Joy to the World American International School - 〒112-0002東京都文京区小石川5-11-17 2F - 03-5684-0247 -
+                    joytotheworld.info</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar"></div>
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100%;
+    width: 100%;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.a4-portrait {
+    width: 210mm;
+    height: 297mm;
+}
+
+section {
+    display: flex;
+    justify-content: space-between;
+}
+
+img {
+    width: auto;
+    height: 10mm;
+}
+
+header svg {
+    width: 8mm;
+    height: 8mm;
+    color: #be1919;
+}
+
+main svg {
+    width: 4mm;
+    height: 4mm;
+    color: limegreen;
+}
+
+header {
+    background-color: pink;
+}
+
+.shift-date-details {
+    display: grid;
+    grid-template-columns: 5rem 10fr 5rem;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    white-space: pre;
+    position: relative;
+    min-height: 3lh;
+    background-color: white;
+
+    div:nth-child(2) {
+        text-align: center;
+    }
+
+    div:nth-child(3) {
+        position: absolute;
+        text-align: right;
+        right: 0;
+    }
+}
+
+main {
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+footer {
+    background-color: blue;
+
+}
+
+.barcode-wrapper {
+    height: 30mm;
+    width: 30mm;
+    padding: 3mm;
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+}
+
+
+.data-rows {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, auto) repeat(2, 1fr) repeat(4, auto);
+    grid-auto-rows: 1.5lh;
+    border-block: 1px solid black;
+    
+
+
+
+
+    &>div {
+        display: grid;
+        grid-template-columns: subgrid;
+        grid-column: span 9;
+        align-items: stretch;
+        border-block-end: 1px solid black;
+
+
+
+    }
+
+    &>div:first-child>div:first-child {
+        grid-column: span 3;
+        justify-content: center;
+    }
+
+    &>div div {
+        display: flex;
+        align-items: center;
+        border-inline-end: 1px solid black;
+        padding-inline: .5rem;
+
+        &:last-child {
+            border-inline-end: none;
+        }
+    }
+
+
+}
+
+
+.depart {
+    grid-column: span 5;
+}
+
+.student-name {
+    display: flex;
+    justify-content: space-between;
+
+
+    &>div:first-child {
+        border-inline-end: none;
+        padding-inline: 0;
+    }
+}

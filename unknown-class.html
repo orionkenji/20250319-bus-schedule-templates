@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K1</title>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="pick-up-svg" viewBox="0 0 512 512">
+            <path fill="currentColor"
+                d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM184 128l92 0c50.8 0 92 41.2 92 92s-41.2 92-92 92l-68 0 0 48 0 24-48 0 0-24 0-72 0-136 0-24 24 0zm92 136c24.3 0 44-19.7 44-44s-19.7-44-44-44l-68 0 0 88 68 0z" />
+        </symbol>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="help-svg" viewBox="0 0 448 512">
+            <path fill="currentColor"
+                d="M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zM184 336l24 0 0-64-24 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l48 0c13.3 0 24 10.7 24 24l0 88 8 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-80 0c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
+        </symbol>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="allergy-svg" viewBox="0 0 512 512">
+            <path fill="currentColor"
+                d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-400c9.1 0 17.4 5.1 21.5 13.3l104 208c5.9 11.9 1.1 26.3-10.7 32.2s-26.3 1.1-32.2-10.7L321.2 320l-130.3 0-17.4 34.7c-5.9 11.9-20.3 16.7-32.2 10.7s-16.7-20.3-10.7-32.2l104-208c4.1-8.1 12.4-13.3 21.5-13.3zm0 77.7L214.8 272l82.3 0L256 189.7z" />
+        </symbol>
+    </svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="medical-svg" viewBox="0 0 512 512">
+            <path fill="currentColor"
+                d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM171.5 137.9L256 255l84.5-117.1c6.1-8.4 16.9-12 26.8-8.8s16.6 12.4 16.6 22.8l0 208c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-133.8-60.5 83.8c-4.5 6.2-11.7 9.9-19.5 9.9s-14.9-3.7-19.5-9.9L176 226.2 176 360c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-208c0-10.4 6.7-19.6 16.6-22.8s20.7 .3 26.8 8.8z" />
+        </symbol>
+    </svg>
+    <svg xmlns=" http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="bus-svg" viewBox="0 0 512 512">
+            <path fill="currentColor" opacity=".4"
+                d="M64 448l0 32c0 17.7 14.3 32 32 32l32 0c17.7 0 32-14.3 32-32l0-32-96 0zm48.2-291.3c-.1 .5-.1 1.1-.1 1.6s0 1.1 0 1.6c0 21.3 0 42.7 0 64c0 .6 0 1.1 0 1.7s.1 1.1 .1 1.6c.1 1.1 .3 2.1 .5 3.2c.4 2.1 1.1 4.1 1.9 6c1.6 3.8 4 7.3 6.9 10.2c5.8 5.8 13.8 9.4 22.6 9.4l96 0 0-128-96 0c-8.8 0-16.8 3.6-22.6 9.4c-2.9 2.9-5.2 6.3-6.9 10.2c-.8 1.9-1.4 3.9-1.9 6c-.2 1-.4 2.1-.5 3.2zM272 128l0 128 96 0c17.7 0 32-14.3 32-32l0-64c0-17.7-14.3-32-32-32l-96 0zm80 320l0 32c0 17.7 14.3 32 32 32l32 0c17.7 0 32-14.3 32-32l0-32-96 0z" />
+            <path fill="currentColor"
+                d="M256 0C380.8 0 464 35.2 464 80l0 16 0 16 16 0c17.7 0 32 14.3 32 32l0 64c0 17.7-14.3 32-32 32l-16 0 0 20.3c9.6 5.5 16 15.9 16 27.7l0 128c0 17.7-14.3 32-32 32L64 448c-17.7 0-32-14.3-32-32l0-128c0-11.8 6.4-22.2 16-27.7L48 240l-16 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l16 0 0-16 0-16C48 35.2 131.2 0 256 0zM112 160l0 64c0 17.7 14.3 32 32 32l96 0 0-128-96 0c-17.7 0-32 14.3-32 32zm160 96l96 0c17.7 0 32-14.3 32-32l0-64c0-17.7-14.3-32-32-32l-96 0 0 128zM112 384a32 32 0 1 0 0-64 32 32 0 1 0 0 64zm288 0a32 32 0 1 0 0-64 32 32 0 1 0 0 64zM352 80c0-8.8-7.2-16-16-16L176 64c-8.8 0-16 7.2-16 16s7.2 16 16 16l160 0c8.8 0 16-7.2 16-16z" />
+        </symbol>
+    </svg>
+   
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="lunch-svg" viewBox="0 0 448 512">
+            <path fill="currentColor"
+                d="M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zM176 152l0 184 120 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-144 0c-13.3 0-24-10.7-24-24l0-208c0-13.3 10.7-24 24-24s24 10.7 24 24z" />
+        </symbol>
+    </svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="extended-svg" viewBox="0 0 512 512">
+            <path fill="currentColor"
+                d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9L0 168c0 13.3 10.7 24 24 24l110.1 0c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24l0 104c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65 0-94.1c0-13.3-10.7-24-24-24z" />
+        </symbol>
+    </svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="ae-class-svg" viewBox="0 0 500 500">
+            <path fill="currentColor"
+                d="M410,26H90c-35.3,0-64,28.7-64,64v320c0,35.3,28.7,64,64,64h320c35.3,0,64-28.7,64-64V90c0-35.3-28.7-64-64-64ZM251.84,344.4c-2.52,6.71-7.28,11.94-13.4,14.73-12.63,5.77-27.19-.79-32.45-14.61l-9.63-25.29h-62.82l-9.63,25.28c-2.55,6.7-7.33,11.91-13.46,14.67-3.05,1.37-6.24,2.06-9.44,2.06s-6.48-.7-9.56-2.11c-6.12-2.79-10.88-8.03-13.4-14.73-2.52-6.71-2.51-14.09.05-20.79l63.96-168.04c3.82-10.14,12.81-16.73,22.91-16.73s19.09,6.59,22.92,16.78l3.39,9,60.52,158.99c2.55,6.69,2.57,14.08.05,20.79ZM366.13,222.28c13.69,0,24.83,12.19,24.83,27.18s-11.14,27.18-24.83,27.18h-51.92v29.66h77.51c13.69,0,24.83,12.19,24.83,27.18s-11.14,27.18-24.83,27.18h-89.55c-20.75,0-37.62-18.48-37.62-41.19v-140.04c0-22.71,16.88-41.19,37.62-41.19h89.55c13.69,0,24.83,12.19,24.83,27.18s-11.14,27.18-24.83,27.18h-77.51v29.66h51.92ZM154.24,264.87h21.45l-10.72-28.18-10.73,28.18Z" />
+        </symbol>
+    </svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="ak-class-svg" viewBox="0 0 500 500">
+            <path fill="currentColor"
+                d="M155.06,264.7h21.24l-10.62-27.9-10.62,27.9ZM410,26H90c-35.3,0-64,28.7-64,64v320c0,35.3,28.7,64,64,64h320c35.3,0,64-28.7,64-64V90c0-35.3-28.7-64-64-64ZM251.71,343.46c-2.5,6.64-7.21,11.82-13.27,14.59-12.5,5.71-26.92-.78-32.14-14.47l-9.53-25.04h-62.21l-9.53,25.04c-2.53,6.64-7.26,11.79-13.33,14.53-3.02,1.36-6.18,2.04-9.35,2.04s-6.41-.7-9.46-2.09c-6.06-2.77-10.77-7.95-13.27-14.59-2.5-6.64-2.48-13.96.05-20.59l63.34-166.4c3.78-10.04,12.69-16.57,22.68-16.57s18.9,6.52,22.7,16.62l3.35,8.92,59.93,157.44c2.53,6.63,2.54,13.94.04,20.59ZM409.59,317.11c3.73,5.92,5.13,13.06,3.96,20.13-1.17,7.09-4.8,13.25-10.2,17.33-4.24,3.2-9.1,4.74-13.91,4.74-7.8,0-15.48-4.03-20.25-11.53l-44.41-70.18-12.15,13.71v41.08c0,14.84-11.03,26.92-24.59,26.92s-24.59-12.07-24.59-26.92v-166.41c0-14.84,11.03-26.92,24.59-26.92s24.59,12.07,24.59,26.92v48.03l59.13-66.73c4.57-5.16,10.7-8.07,17.26-8.18,6.55-.1,12.77,2.58,17.48,7.59,9.73,10.32,9.98,27.38.55,38.04h0s-47.37,53.46-47.37,53.46l49.92,78.94Z" />
+        </symbol>
+    </svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="pm-extended-svg" viewBox="0 0 512 512">
+            <path fill="currentColor"
+                d="M256,0C114.6,0,0,114.6,0,256s114.6,256,256,256c54.3,0,104.8-17,146.4-45.9,14.5-10.2,18.1-30.1,7.9-44.6-10.2-14.5-30.1-18-44.6-7.9-31.1,21.7-68.9,34.4-109.7,34.4-106,0-192-86-192-192,0-106,86-192,192-192,53,0,101,21.5,135.7,56.2l-30.8,30.8c-15.1,15.1-4.4,41,17,41h110.1c13.3,0,24-10.7,24-24V57.9c0-21.3-25.9-32-41-16.9l-34,34C390.7,28.7,326.7,0,256,0ZM256.1,128c-13.3,0-24,10.7-24,24v94.1s-65,65-65,65c-9.4,9.3-9.3,24.5,0,33.9s24.5,9.4,33.9,0l72-72c4.5-4.5,7-10.6,7-17v-104c0-13.3-10.7-24-24-24h.1Z" />
+        </symbol>
+    </svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="am-extended-svg" viewBox="0 0 512 512">
+            <path fill="currentColor"
+                d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9L0 168c0 13.3 10.7 24 24 24l110.1 0c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24l0 104c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65 0-94.1c0-13.3-10.7-24-24-24z" />
+        </symbol>
+    </svg>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inconsolata:wdth,wght@50..200,200..900&family=Noto+Sans+JP:wght@100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="unknown-class.css">
+</head>
+
+<body class="a4-portrait">
+    <header>
+        <section> <img
+                src="https://cdn.prod.website-files.com/5c02771190375e263a515ec5/65ac1052f76385678400c82c_joy-logo-short-blue.png"
+                alt="Joy Logo">
+            <div>Class Attendance</div>
+            <div>
+                <svg class="property-of-icon">
+                    <use href="#help-svg"></use>
+                </svg>
+                <div>この書類はJoy to the Worldに帰属します。発見された場合はお電話ください。This document is the property of Joy to the World. If
+                    found, please contact us. TEL: 03-5684-0247.</div>
+            </div>
+        </section>
+        <section class="shift-date-details">
+            <div>K1</div>
+            <div>Mon, Mar 31, 2025</div>
+            <div>Day 1 of <br>2024-2025 Term 3<br>Week 31</div>
+        </section>
+    </header>
+    <main>
+       <section>
+        <div>Head Teacher: Katelynn Sheel</div>
+        <div>Assistant Teacher: Ana Francisco</div>
+       </section>
+        <section class="data-rows">
+            <div>
+                <div>Student Name and Age</div>
+                <div>Arrival</div>
+                <div>Departure</div>
+                <div>Leave<br>Joy</div>
+                <div>Arrive<br>Park</div>
+                <div>Leave<br>Park</div>
+                <div>Arrive<br>Joy</div>
+            </div>
+
+
+            <div>
+                <div>7:30 AM</div>
+                <div class="depart">Depart</div>
+            </div>
+            <div>
+                <div>7:45 AM</div>
+                <div class="student-name">
+                    <div>Takuto Cho</div>
+                    <svg>
+                        <use href="#pick-up-svg"></use>
+                    </svg>
+                </div>
+              
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div>
+                <div>7:50 AM</div>
+                <div>
+                    <div>Annie Li</div>
+                    <svg>
+                        <use href="#pick-up-svg"></use>
+                    </svg>
+                </div>
+               
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+
+            <div>
+                <div>8:10 AM</div>
+                <div>Depart</div>
+            </div>
+            <div>
+                <div>8:20 AM</div>
+                <div>
+                    <div>Taiga Kobayashi</div>
+                    <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+                            <path fill="currentColor"
+                                d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM184 128l92 0c50.8 0 92 41.2 92 92s-41.2 92-92 92l-68 0 0 48 0 24-48 0 0-24 0-72 0-136 0-24 24 0zm92 136c24.3 0 44-19.7 44-44s-19.7-44-44-44l-68 0 0 88 68 0z" />
+                        </svg></div>
+                </div>
+             
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div>
+                <div>8:20 AM</div>
+                <div>
+                    <div>Sora Kobayashi</div>
+                    <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+                            <path fill="currentColor"
+                                d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM184 128l92 0c50.8 0 92 41.2 92 92s-41.2 92-92 92l-68 0 0 48 0 24-48 0 0-24 0-72 0-136 0-24 24 0zm92 136c24.3 0 44-19.7 44-44s-19.7-44-44-44l-68 0 0 88 68 0z" />
+                        </svg></div>
+                </div>
+               
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        
+        </section>
+      
+        <section>
+          
+            <div>After the final signatures, take a picture of this sheet and use the QR code to upload the image.
+                Please "X"over the QR code when done. This can be done at the end of the shift or at the beginning
+                of the next, whenever is easiest. </div>
+        </section>
+        <div class="barcode-wrapper">
+            <img src="barcode.png" alt="QR Code">
+        </div>
+        </div>
+    </main>
+    <footer>Joy to the World American International School - 〒112-0002東京都文京区小石川5-11-17 2F - 03-5684-0247 -
+        joytotheworld.info</footer>
+</body>
+
+</html>
